@@ -4,6 +4,12 @@ unit:
 {2, floor(3**([[1d6]]/2-1)-1)}kl1
 -->
 
+<!--
+TODO: Sync repeating_moves/abilities with repeating_minimoves/miniabilities
+Make Roll Template
+Make Rolls
+-->
+
 <input type="radio" name="attr_tab" class="sheet-trainertab" value="1" title="Trainer" checked="checked" />
 <input type="radio" name="attr_tab" class="sheet-pokemontab" value="2" title="Pokémon" />
 
@@ -74,7 +80,7 @@ unit:
                     Loyalty:
                 </td>
                 <td>
-                    <input title="pokemon_disobedience" class="sheet-shortfield" name="attr_pokemon_disobedience" type="number" min='0' max='5'/>
+                    <input title="pokemon_loyalty" class="sheet-shortfield" name="attr_pokemon_loyalty" type="number" min='0' max='5'/>
                 </td>
             </tr>
         </table>
@@ -121,7 +127,7 @@ unit:
                 <td class='sheet-table-header'>
                     EXP:
                 </td>
-               <td>
+                <td>
                     <div class='sheet-trainertab'>
                         <input title="EXP" class="sheet-shortfield" name="attr_EXP" type="number"/>
                     </div>
@@ -184,37 +190,6 @@ unit:
                 </td>
             </tr>
         </table>
-        <h4 class='sheet-minihead sheet-trainertab'>Status Ailments</h4>
-        <table class='sheet-table sheet-status-table sheet-trainertab'>
-            <tr>
-                <td class='sheet-table-header'>Burn 1:</td>
-                <td><input title='st_burn1' type='checkbox' value=1 name='attr_st_burn1'/></td>
-                <td class='sheet-table-header'>Burn 2:</td>
-                <td><input title='st_burn2' type='checkbox' value=1 name='attr_st_burn2'/></td>
-                <td class='sheet-table-header'>Burn 3:</td>
-                <td><input title='st_burn3' type='checkbox' value=1 name='attr_st_burn3'/></td>
-                <td class='sheet-table-header'>Frozen:</td>
-                <td><input type='checkbox' name='attr_st_froz'/></td>
-                <td class='sheet-table-header'>Paralysis:</td>
-                <td><input title='st_para' type='checkbox' value=1 name='attr_st_para'/></td>
-                <td class='sheet-table-header'>Poisoned:</td>
-                <td><input title='st_pois' type='checkbox' value=1 name='attr_st_pois'/></td>
-            </tr>
-            <tr>
-                <td class='sheet-table-header'>Badly Poisoned:</td>
-                <td><input title='st_bad_pois' type='checkbox' value=1 name='attr_st_bad_pois'/></td>
-                <td class='sheet-table-header'>Sleep:</td>
-                <td><input title='st_sleep' type='checkbox' value=1 name='attr_st_sleep'/></td>
-                <td class='sheet-table-header'>Confused:</td>
-                <td><input title='st_conf' type='checkbox' value=1 name='attr_st_conf'/></td>
-                <td class='sheet-table-header'>Disabled:</td>
-                <td><input title='st_disa' type='checkbox' value=1 name='attr_st_disa'/></td>
-                <td class='sheet-table-header'>Flinch:</td>
-                <td><input title='st_flin' type='checkbox' value=1 name='attr_st_flin'/></td>
-                <td class='sheet-table-header'>In Love:</td>
-                <td><input title='st_love' type='checkbox' value=1 name='attr_st_love'/></td>
-            </tr>
-        </table>
         <h4 class='sheet-minihead'>Nature</h4>
         <table class='sheet-table'>
             <tr>
@@ -256,122 +231,101 @@ unit:
     <div class="sheet-content">
         <h3 class='sheet-header'>Basic Info</h3> 
         <h4 class='sheet-minihead'>Battle Stats</h4>
-        <table class='sheet-table'>
-            <tr>
-                <td>
-                    Accuracy:
-                </td>
-                <td>
-                    <input title='pokemon_Accuracy' class='sheet-shortfield2' type="number" name="attr_pokemon_Accuracy"/>
-                </td>
-                <td>
-                    Initiative:
-                </td>
-                <td>
-                    <input title='pokemon_Dexterity' class='sheet-shortfield2' type="number" name="attr_InitD"/>
-                    +
-                    <input title='pokemon_Survival' class='sheet-shortfield2' type="number" name="attr_InitS"/>
-                    +
-                    <input title='pokemon_Alert' class='sheet-shortfield2' type="number" name="attr_InitA"/>
-                    =
-                    <input title='pokemon_Initiative' class='sheet-shortfield2' type="number" name="attr_pokemon_Initiative"/>
-                </td>
-                <td>
-                    Def:
-                </td>
-                <td>
-                    <input title='pokemon_Vitality' class='sheet-shortfield2' type="number" name="attr_DefV"/>
-                    +
-                    <select title='Def_Stage' class='sheet-shortfield2' name='attr_Def_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    =
-                    <input title='Def' type="number" name="attr_Def" class=sheet-shortfield2/>
-                </td>
-            </tr>
-        </table>
         <table class='sheet-odd-table'>
             <tr>
                 <td>
-                    Evasion:
+                    HP:
                 </td>
                 <td>
-                    <input title='pokemon_Dexterity' class='sheet-shortfield2' type="number" name="attr_EvaD"/>
-                    +
-                    <input title='pokemon_Fight' class='sheet-shortfield2' type="number" name="attr_EvaF"/>
-                    +
-                    <input title='pokemon_Evasion' class='sheet-shortfield2' type="number" name="attr_EvaE"/>
-                    +
-                    <select title='SpDef_Stage' class='sheet-shortfield2' name='attr_Evasion_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    =
-                    <input title='pokemon_Evasion_Battle' class='sheet-shortfield2' type="number" name="attr_pokemon_Evasion_Battle"/>
+                    <input title="pokemon_HP" class="sheet-shortfield" name="attr_pokemon_HP" type="number"/>/<input title="pokemon_HP" class="sheet-shortfield" name="attr_pokemon_HP_max" type="number"/>
                 </td>
                 <td>
-                    Sp. Def:
+                    Will:
                 </td>
                 <td>
-                    <input title='pokemon_Vitality' class='sheet-shortfield2' type="number" name="attr_SpDefV"/>
-                    +
-                    <select title='SpDef_Stage' class='sheet-shortfield2' name='attr_SpDef_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    =
-                    <input title='SpDef' type="number" name="attr_SpDef" class=sheet-shortfield2/>
+                    <input title="pokemon_will" class="sheet-shortfield" name="attr_pokemon_will" type="number"/>/<input title="pokemon_will" class="sheet-shortfield" name="attr_pokemon_will_max" type="number"/>
                 </td>
             </tr>
         </table>
         <table class='sheet-table'>
             <tr>
-                <td>
-                    Strength:
+                <th rowspan=2>Stat</th>
+                <th colspan=3>Base Stats (Hover for Attr)</th>
+                <th rowspan=2>Bonus</th>
+                <th rowspan=2>Total</th>
+            </tr>
+            <tr style='background-color: #E5E5E5;'>
+                <th>Base Stat 1</th>
+                <th>Base Stat 2</th>
+                <th>Base Stat 3</th>
+            </tr>
+            <tr class='sheet-dummy'>
+                <td colspan=5>
                 </td>
-                <td>
-                    <input title='pokemon_Strength' class='sheet-shortfield2' type="number" name="attr_StrengthS"/>
-                    +
-                    <input title='pokemon_Strength_Mod' class='sheet-shortfield2' type="number" name="attr_pokemon_Strength_Mod"/>
-                    =
-                    <input title='pokemon_Battle_Strength' class='sheet-shortfield2' type="number" name="attr_pokemon_Battle_Strength"/>
-                </td>
-                <td>
-                    Dexterity:
-                </td>
-                <td>
-                    <input title='pokemon_Dexterity' class='sheet-shortfield2' type="number" name="attr_DexterityS"/>
-                    +
-                    <input title='pokemon_Dexterity_Mod' class='sheet-shortfield2' type="number" name="attr_pokemon_Dexterity_Mod"/>
-                    =
-                    <input title='pokemon_Battle_Dexterity' class='sheet-shortfield2' type="number" name="attr_pokemon_Battle_Dexterity"/>
-                </td>
-                <td>
-                    Special:
-                </td>
-                <td>
-                    <input title='pokemon_Special' class='sheet-shortfield2' type="number" name="attr_SpecialS"/>
-                    +
-                    <input title='pokemon_Special_Mod' class='sheet-shortfield2' type="number" name="attr_pokemon_Special_Mod"/>
-                    =
-                    <input title='pokemon_Battle_Special' class='sheet-shortfield2' type="number" name="attr_pokemon_Battle_Special"/>
-                </td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>Initiative</td>
+                <td align="center"><input title='pokemon_Dexterity' class='sheet-shortfield2' type="number" name="attr_pokemon_Dexterity" value='1' min='1' max='10'/>+</td>
+                <td align='center'><input title='pokemon_Survival' class='sheet-shortfield2' type="number" name="attr_pokemon_Survival" value='0' min='1' max='5'/>+</td>
+                <td align='center'><input title='pokemon_Alert' class='sheet-shortfield2' type="number" name="attr_pokemon_Alert" value='0' min='1' max='5'/></td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'>=<input title='pokemon_Initiative' class='sheet-shortfield2' type="number" name="attr_pokemon_Initiative" value='1'/></td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>Strength</td>
+                <td align="center"><input title='pokemon_Strength' class='sheet-shortfield2' type="number" name="attr_pokemon_Strength" value='1' min='1' max='10'/>+</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'><input title='pokemon_Strength_Mod' class='sheet-shortfield2' type="number" name="attr_pokemon_Strength_Mod" value='0'/></td>
+                <td align='center'>=<input title='pokemon_Battle_Strength' class='sheet-shortfield2' type="number" name="attr_pokemon_Battle_Strength" value='1'/></td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>Dexterity</td>
+                <td align="center"><input title='pokemon_Dexterity' class='sheet-shortfield2' type="number" name="attr_pokemon_Dexterity" value='1' min='1' max='10'/>+</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'><input title='pokemon_Dexterity_Mod' class='sheet-shortfield2' type="number" name="attr_pokemon_Dexterity_Mod" value='0'/></td>
+                <td align='center'><input title='pokemon_Battle_Dexterity' class='sheet-shortfield2' type="number" name="attr_pokemon_Battle_Dexterity" value='1'/></td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>Special</td>
+                <td align="center"><input title='pokemon_Special' class='sheet-shortfield2' type="number" name="attr_pokemon_Special" value='1' min='1' max='10'/>+</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'><input title='pokemon_Special_Mod' class='sheet-shortfield2' type="number" name="attr_pokemon_Special_Mod" value='0'/></td>
+                <td align='center'>=<input title='pokemon_Battle_Special' class='sheet-shortfield2' type="number" name="attr_pokemon_Battle_Special" value='1'/></td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>Defense</td>
+                <td align="center"><input title='pokemon_Vitality' class='sheet-shortfield2' type="number" name="attr_pokemon_Vitality" value='1'  min='1' max='10'/>+</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'><input title='Def_Bonus' class='sheet-shortfield2' type="number" name="attr_Def_Bonus" value='0'/></td>
+                <td align='center'>=<input title='Def' type="number" name="attr_Def" class=sheet-shortfield2 value='1'/></td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>Sp. Defense</td>
+                <td align="center"><input title='pokemon_Vitality' class='sheet-shortfield2' type="number" name="attr_pokemon_Vitality" value='1' min='1' max='10'/>+</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'><input title='SpDef_Bonus' class='sheet-shortfield2' type="number" name="attr_SpDef_Bonus" value='0'/></td>
+                <td align='center'>=<input title='SpDef' type="number" name="attr_SpDef" class=sheet-shortfield2 value='1'/></td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>Accuracy Bonus</td>
+                <td align="center">&nbsp;</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'>&nbsp;</td>
+                <td align='center'><input title='pokemon_Accuracy' class='sheet-shortfield2' type="number" name="attr_pokemon_Accuracy" value='0'/></td>
+                <td align='center'>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>Evasion</td>
+                <td align="center"><input title='pokemon_Dexterity' class='sheet-shortfield2' type="number" name="pokemon_Dexterity" value='1' min='1' max='10'/>+</td>
+                <td align='center'><input title='pokemon_Fight' class='sheet-shortfield2' type="number" name="pokemon_Fight" value='0' min='1' max='5'/>+</td>
+                <td align='center'><input title='pokemon_Evasion' class='sheet-shortfield2' type="number" name="pokemon_Evasion" value='0' min='1' max='5'/>+</td>
+                <td align='center'><input title='pokemon_Evasion_Bonus' class='sheet-shortfield2' type="number" name="attr_Evasion_Bonus" value='0'/></td>
+                <td align='center'>=<input title='pokemon_Evasion_Battle' class='sheet-shortfield2' type="number" name="attr_pokemon_Evasion_Battle" value='1'/></td>
             </tr>
         </table>
         <h4 class='sheet-minihead'>Status Ailments</h4>
@@ -403,569 +357,6 @@ unit:
                 <td><input title='pokemon_st_flin' type='checkbox' value=1 name='attr_pokemon_st_flin'/></td>
                 <td class='sheet-table-header'>In Love:</td>
                 <td><input title='pokemon_st_love' type='checkbox' value=1 name='attr_pokemon_st_love'/></td>
-            </tr>
-        </table>
-        <input type="checkbox" class="sheet-arrow" name="attr_Move_Hide"/><span></span>
-        <h3 class='sheet-header'>Stat Stages</h3>
-        <h3 class='sheet-minihead sheet-stagelist'>Physical Attributes</h3>
-        <table class='sheet-table sheet-stagelist'>
-            <tr class='sheet-9col2'>
-                <td class='sheet-table-header sheet-tough'>
-                    Strength:
-                </td>
-                <td class='sheet-tough'>
-                    <input title="pokemon_Tough" class="sheet-shortfield" name="attr_dummy_stage_Tough" type="number" value='1'/>
-                    +
-                    <select title='pokemon_Tough_Stage' class='sheet-shortfield2' name='attr_pokemon_Tough_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Tough_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Tough_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-tough sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_StrengthCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-cool'>
-                    Dexterity:
-                </td>
-                <td class='sheet-cool'>
-                    <input title="pokemon_Dexterity" class="sheet-shortfield" name="attr_dummy_stage_Dexterity" type="number" value='1'/>
-                    +
-                    <select title='pokemon_Dexterity_Stage' class='sheet-shortfield2' name='attr_pokemon_Dexterity_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Dexterity_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Dexterity_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-cool sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_VitalityCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-beauty'>
-                    Vitality:
-                </td>
-                <td class='sheet-beauty'>
-                    <input title="pokemon_Vitality" class="sheet-shortfield" name="attr_dummy_stage_Vitality" type="number" value='1'/>
-                    +
-                    <select title='pokemon_Vitality_Stage' class='sheet-shortfield2' name='attr_pokemon_Vitality_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Vitality_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Vitality_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-beauty sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_DexterityCheck'></button>
-                </td>
-            </tr>
-        </table>
-        <table class='sheet-table sheet-stagelist'>
-            <tr class='sheet-6col'>
-                <td class='sheet-table-header sheet-cute'>
-                    Special:
-                </td>
-                <td class='sheet-cute'>
-                    <input title="pokemon_Special" class="sheet-shortfield" name="attr_dummy_stage_Special" type="number" value='1'/>
-                    +
-                    <select title='pokemon_Special_Stage' class='sheet-shortfield2' name='attr_pokemon_Special_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Special_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Special_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-cute sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_DexterityCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-intelligence'>
-                    Insight:
-                </td>
-                <td class='sheet-intelligence'>
-                    <input title="pokemon_Insight" class="sheet-shortfield" name="attr_dummy_stage_Insight" type="number" value='1'/>
-                    +
-                    <select title='pokemon_Insight_Stage' class='sheet-shortfield2' name='attr_pokemon_Insight_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Insight_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Insight_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-intelligence sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_InsightCheck'></button>
-                </td>
-            </tr>
-        </table>
-        <h3 class='sheet-minihead sheet-stagelist'>Social Attributes</h3>
-        <table class='sheet-table sheet-stagelist'>
-            <tr class='sheet-9col2'>
-                <td class='sheet-table-header sheet-tough'>
-                    Tough:
-                </td>
-                <td class='sheet-tough'>
-                    <input title="pokemon_Tough" class="sheet-shortfield" name="attr_dummy_stage_Tough" type="number" value='1'/>
-                    +
-                    <select title='pokemon_Tough_Stage' class='sheet-shortfield2' name='attr_pokemon_Tough_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Tough_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Tough_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-tough sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_ToughCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-cool'>
-                    Cool:
-                </td>
-                <td class='sheet-cool'>
-                    <input title="pokemon_Cool" class="sheet-shortfield" name="attr_dummy_stage_Cool" type="number" value='1'/>
-                    +
-                    <select title='pokemon_Cool_Stage' class='sheet-shortfield2' name='attr_pokemon_Cool_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Cool_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Cool_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-cool sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_CoolCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-beauty'>
-                    Beauty:
-                </td>
-                <td class='sheet-beauty'>
-                    <input title="pokemon_Beauty" class="sheet-shortfield" name="attr_dummy_stage_Beauty" type="number" value='1'/>
-                    +
-                    <select title='pokemon_Beauty_Stage' class='sheet-shortfield2' name='attr_pokemon_Beauty_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Beauty_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Beauty_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-beauty sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_BeautyCheck'></button>
-                </td>
-            </tr>
-        </table>
-        <table class='sheet-table sheet-stagelist'>
-            <tr class='sheet-6col'>
-                <td class='sheet-table-header sheet-cute'>
-                    Cute:
-                </td>
-                <td class='sheet-cute'>
-                    <input title="pokemon_Cute" class="sheet-shortfield" name="attr_dummy_stage_Cute" type="number" value='1'/>
-                    +
-                    <select title='pokemon_Cute_Stage' class='sheet-shortfield2' name='attr_pokemon_Cute_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Cute_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Cute_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-cute sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_DexterityCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-intelligence'>
-                    Smart:
-                </td>
-                <td class='sheet-intelligence'>
-                    <input title="pokemon_Smart" class="sheet-shortfield" name="attr_dummy_stage_Smart" type="number" value='1'/>
-                    +
-                    <select title='pokemon_Smart_Stage' class='sheet-shortfield2' name='attr_pokemon_Smart_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Smart_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Smart_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-intelligence sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_SmartCheck'></button>
-                </td>
-            </tr>
-        </table>
-        <h3 class='sheet-minihead sheet-stagelist'>Skills</h3>
-        <table class='sheet-table sheet-stagelist'>
-            <tr class='sheet-9col2'>
-                <td class='sheet-table-header sheet-tough'>
-                    Fight:
-                </td>
-                <td class='sheet-tough'>
-                    <input title="pokemon_Fight" class="sheet-shortfield" name="attr_dummy_stage_Fight" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Fight_Stage' class='sheet-shortfield2' name='attr_pokemon_Fight_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Fight_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Fight_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-tough sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_FightCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-cool'>
-                    Survival:
-                </td>
-                <td class='sheet-cool'>
-                    <input title="pokemon_Survival" class="sheet-shortfield" name="attr_dummy_stage_Survival" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Survival_Stage' class='sheet-shortfield2' name='attr_pokemon_Survival_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Survival_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Survival_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-cool sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_SurvivalCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-beauty'>
-                    Contest:
-                </td>
-                <td class='sheet-beauty'>
-                    <input title="pokemon_Contest" class="sheet-shortfield" name="attr_dummy_stage_Contest" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Contest_Stage' class='sheet-shortfield2' name='attr_pokemon_Contest_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Contest_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Contest_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-beauty sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_ContestCheck'></button>
-                </td>
-            </tr>
-            <tr>
-                <td colspan=9>
-                    <h3 class='sheet-minihead'>Specialities</h3>
-                </td>
-            </tr>
-            <tr class='sheet-9col2'>
-                <td class='sheet-table-header sheet-tough'>
-                    Brawl:
-                </td>
-                <td class='sheet-tough'>
-                    <input title="pokemon_Brawl" class="sheet-shortfield" name="attr_dummy_stage_Brawl" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Brawl_Stage' class='sheet-shortfield2' name='attr_pokemon_Brawl_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Brawl_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Brawl_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-tough sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_BrawlCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-cool'>
-                    Alert:
-                </td>
-                <td class='sheet-cool'>
-                    <input title="pokemon_Alert" class="sheet-shortfield" name="attr_dummy_stage_Alert" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Alert_Stage' class='sheet-shortfield2' name='attr_pokemon_Alert_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Alert_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Alert_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-cool sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_AlertCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-beauty'>
-                    Allure:
-                </td>
-                <td class='sheet-beauty'>
-                    <input title="pokemon_Allure" class="sheet-shortfield" name="attr_dummy_stage_Allure" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Allure_Stage' class='sheet-shortfield2' name='attr_pokemon_Allure_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Allure_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Allure_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-beauty sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_AllureCheck'></button>
-                </td>
-            </tr>
-            <tr class='sheet-9col2'>
-                <td class='sheet-table-header sheet-tough'>
-                    Channel:
-                </td>
-                <td class='sheet-tough'>
-                    <input title="pokemon_Throw" class="sheet-shortfield" name="attr_dummy_stage_Throw" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Throw_Stage' class='sheet-shortfield2' name='attr_pokemon_Throw_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Throw_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Throw_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-tough sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_ChannelCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-cool'>
-                    Athletic:
-                </td>
-                <td class='sheet-cool'>
-                    <input title="pokemon_Athletic" class="sheet-shortfield" name="attr_dummy_stage_Athletic" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Athletic_Stage' class='sheet-shortfield2' name='attr_pokemon_Athletic_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Athletic_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Athletic_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-cool sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_AthleticCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-beauty'>
-                    Etiquette:
-                </td>
-                <td class='sheet-beauty'>
-                    <input title="pokemon_Etiquette" class="sheet-shortfield" name="attr_dummy_stage_Etiquette" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Etiquette_Stage' class='sheet-shortfield2' name='attr_pokemon_Etiquette_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Etiquette_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Etiquette_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-beauty sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_EtiquetteCheck'></button>
-                </td>
-            </tr>
-            <tr class='sheet-9col2'>
-                <td class='sheet-table-header sheet-tough'>
-                    Evasion:
-                </td>
-                <td class='sheet-tough'>
-                    <input title="pokemon_Evasion" class="sheet-shortfield" name="attr_dummy_stage_Evasion" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Evasion_Stage' class='sheet-shortfield2' name='attr_pokemon_Evasion_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Evasion_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Evasion_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-tough sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_EvasionCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-cool'>
-                    Nature:
-                </td>
-                <td class='sheet-cool'>
-                    <input title="pokemon_Nature" class="sheet-shortfield" name="attr_dummy_stage_Nature" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Nature_Stage' class='sheet-shortfield2' name='attr_pokemon_Nature_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Nature_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Nature_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-cool sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_NatureCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-beauty'>
-                    Intimidate:
-                </td>
-                <td class='sheet-beauty'>
-                    <input title="pokemon_Intimidate" class="sheet-shortfield" name="attr_dummy_stage_Intimidate" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Intimidate_Stage' class='sheet-shortfield2' name='attr_pokemon_Intimidate_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Intimidate_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Intimidate_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-beauty sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_IntimidateCheck'></button>
-                </td>
-            </tr>
-            <tr class='sheet-9col2'>
-                <td class='sheet-table-header sheet-tough'>
-                    Clash:
-                </td>
-                <td class='sheet-tough'>
-                    <input title="pokemon_Clash" class="sheet-shortfield" name="attr_dummy_stage_Clash" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Clash_Stage' class='sheet-shortfield2' name='attr_pokemon_Clash_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Clash_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Clash_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-tough sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_WeaponsCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-cool'>
-                    Stealth:
-                </td>
-                <td class='sheet-cool'>
-                    <input title="pokemon_Stealth" class="sheet-shortfield" name="attr_dummy_stage_Stealth" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Stealth_Stage' class='sheet-shortfield2' name='attr_pokemon_Stealth_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Stealth_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Stealth_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-cool sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_StealthCheck'></button>
-                </td>
-                <td class='sheet-table-header sheet-beauty'>
-                    Perform:
-                </td>
-                <td class='sheet-beauty'>
-                    <input title="pokemon_Perform" class="sheet-shortfield" name="attr_dummy_stage_Perform" type="number" value='0'/>
-                    +
-                    <select title='pokemon_Perform_Stage' class='sheet-shortfield2' name='attr_pokemon_Perform_Stage'>
-                        <option value='-3'>-3</option> 
-                        <option value='-2'>-2</option>
-                        <option value='-1'>-1</option>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option> 
-                    </select>
-                    +
-                    <input title="pokemon_Perform_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Perform_Ability_Bonus" type="number" value='0'/>
-                </td>
-                <td class='sheet-beauty sheet-miniroll'>
-                    <button type='roll' value='' name='roll_pokemon_PerformCheck'></button>
-                </td>
             </tr>
         </table>
         <h3 class='sheet-header'>Abilities</h3> 
@@ -2490,8 +1881,8 @@ on("change:repeating_moves:move_output", function(eventInfo) {
     }
 });
 
-on("change:pokemon_dexterity change:pokemon_survival change:pokemon_alert change:pokemon_fight change:pokemon_evasion change:evasion_stage", function(eventInfo) {
-    getAttrs(['pokemon_Dexterity','pokemon_Survival','pokemon_Alert','pokemon_Fight','pokemon_Evasion','Evasion_Stage'], function(v) {
+on("change:pokemon_dexterity change:pokemon_survival change:pokemon_alert change:pokemon_fight change:pokemon_evasion change:evasion_bonus", function(eventInfo) {
+    getAttrs(['pokemon_Dexterity','pokemon_Survival','pokemon_Alert','pokemon_Fight','pokemon_Evasion','Evasion_Bonus'], function(v) {
         setAttrs({ 
             InitD: v.pokemon_Dexterity,
             EvaD: v.pokemon_Dexterity,
@@ -2500,18 +1891,18 @@ on("change:pokemon_dexterity change:pokemon_survival change:pokemon_alert change
             InitA: v.pokemon_Alert,
             EvaE: v.pokemon_Evasion,
             pokemon_Initiative: parseInt(v.pokemon_Dexterity,10)+parseInt(v.pokemon_Survival,10)+parseInt(v.pokemon_Alert,10),
-            pokemon_Evasion_Battle: parseInt(v.pokemon_Dexterity,10)+parseInt(v.pokemon_Fight,10)+parseInt(v.pokemon_Evasion,10)+parseInt(v.Evasion_Stage,10)
+            pokemon_Evasion_Battle: parseInt(v.pokemon_Dexterity,10)+parseInt(v.pokemon_Fight,10)+parseInt(v.pokemon_Evasion,10)+parseInt(v.Evasion_Bonus,10)
         });
     });
 });
 
-on("change:pokemon_vitality change:def_stage change:spdef_stage", function(eventInfo) {
-    getAttrs(['pokemon_Vitality','Def_Stage','SpDef_Stage'], function(v) {
+on("change:pokemon_vitality change:def_bonus change:spdef_bonus", function(eventInfo) {
+    getAttrs(['pokemon_Vitality','Def_Bonus','SpDef_Bonus'], function(v) {
         setAttrs({ 
             DefV: v.pokemon_Vitality,
             SpDefV: v.pokemon_Vitality,
-            Def: Math.min(parseInt(v.pokemon_Vitality,10)+parseInt(v.Def_Stage,10),10),
-            SpDef: Math.min(parseInt(v.pokemon_Vitality,10)+parseInt(v.SpDef_Stage,10),10)
+            Def: Math.min(parseInt(v.pokemon_Vitality,10)+parseInt(v.Def_Bonus,10),10),
+            SpDef: Math.min(parseInt(v.pokemon_Vitality,10)+parseInt(v.SpDef_Bonus,10),10)
         });
     });
 });
