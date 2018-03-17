@@ -1,0 +1,509 @@
+.sheet-page-wrap {
+  width: 100%;
+}
+
+/*dex red: d1402f*/
+
+.sheet-tab [type=radio], 
+div.sheet-checklist, 
+tr.sheet-movelist,
+.sheet-stagelist,
+input.sheet-trainertab:not(:checked) ~ div.sheet-page-wrap .sheet-trainertab,
+input.sheet-pokemontab:not(:checked) ~ div.sheet-page-wrap .sheet-pokemontab,
+.sheet-dummy,
+.sheet-12equal,
+.sheet-dummy_accuracy_w:checked ~ .sheet-will,
+.sheet-dummy_accuracy_f:checked ~ .sheet-survival,
+.sheet-dummy_accuracy_f:checked ~ .sheet-contest,
+.sheet-dummy_accuracy_s:checked ~ .sheet-fight,
+.sheet-dummy_accuracy_s:checked ~ .sheet-contest,
+.sheet-dummy_accuracy_c:checked ~ .sheet-fight,
+.sheet-dummy_accuracy_c:checked ~ .sheet-survival{
+    display: none;
+}
+
+input.sheet-trainertab, input.sheet-pokemontab{
+    width: calc(20% - 4px);
+    max-width: 150px;
+    height: 20px;
+    
+    outline: none !important;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+input.sheet-trainertab {
+    margin-left: 1px;
+}
+
+input.sheet-trainertab::before, input.sheet-pokemontab::before {
+    content: attr(title);
+    display: inline-block;
+
+    background: #fff;
+    border: solid 1px #a8a8a8;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    
+    width: 100%;
+    height: 20px;
+}
+
+input.sheet-trainertab:checked::before, input.sheet-pokemontab:checked::before {
+    border-bottom-color: white;
+}
+
+.sheet-tab-br {
+    border-bottom: 1px solid #a8a8a8;
+    margin-bottom: 5px;
+    margin-top: 1px;
+}
+
+.sheet-boxsizingBorder {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.sheet-tabs {
+      position: relative;   
+      min-height: 300px;/* This part sucks */
+      clear: both;
+      margin: 25px 0;      
+    }
+
+.sheet-tab {
+  /*float: left; */
+}
+
+.sheet-tab label {
+  background: #eee; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  margin-left: -1px; 
+  position: relative;
+  left: 1px;        
+  width: 80px;
+  display: block;
+}
+
+/*.sheet-clear { clear: both; }*/
+
+.sheet-content {
+  position: absolute;
+  top: 0px;
+  left: 102px;
+  background: white;
+  overflow: auto;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  border: 1px solid #ccc;       
+}
+
+.sheet-tab [type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid white;
+  z-index: 2;
+}
+
+.sheet-tab [type=radio]:checked ~ label ~ .sheet-content {
+  z-index: 1;
+}
+
+div.sheet-center {
+    text-align: center;
+}
+
+input.sheet-arrow[type="checkbox"] {
+    color: #E0E0E0;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+input.sheet-arrow[type="checkbox"] + span::before
+{
+    margin-right: 4px;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    width: 14px;
+    height: 14px;
+    content: "▼";
+    color: #E0E0E0;
+    transform: rotate(-90deg);
+}
+
+input.sheet-arrow[type="checkbox"]:checked + span::before {
+    width: 14px;
+    height: 14px;
+    content: "▼";
+    
+    transform: rotate(0deg);
+}
+
+input.sheet-arrow {
+    float: left;
+}
+
+input.sheet-arrow:checked ~ table div.sheet-checklist {
+    display: block;
+}
+
+input.sheet-arrow:checked ~ table tr.sheet-movelist {
+    display: table-row;
+}
+
+input.sheet-arrow:checked ~ .sheet-stagelist {
+    display: block;
+}
+
+.sheet-rolltemplate-PTU table {
+    width: 100%;
+    border: 1px solid;
+    color: black;
+    font-size: 1em;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.sheet-rolltemplate-PTU th {
+    background: url(http://i.imgur.com/5aRtcpq.png) top no-repeat, url(http://i.imgur.com/yyzOMmI.png top no-repeat);
+    color: #ffffff;
+    padding: 2px 2px 2px 40px;
+    border-bottom: 1px solid black;
+    line-height: 1.6em;
+    font-size: 1.2em;
+}
+
+.sheet-rolltemplate-PTU .userscript-tcat {
+    font-weight: bold;
+}
+
+.sheet-rolltemplate-PTU td {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-PTU tr:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-PTU tr:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+
+.sheet-rolltemplate-PTU .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(167, 168, 170,1); /*Cool Gray 6 C*/
+}
+
+.sheet-rolltemplate-PTU .inlinerollresult.fullcrit {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-PTU .inlinerollresult.fullfail {
+	border: 2px solid #B31515;
+}
+
+.sheet-rolltemplate-PTU .inlinerollresult.importantroll {
+	border: 2px solid #4A57ED;
+}
+
+.sheet-rolltemplate-PTU .sheet-hit {
+    background-color: #3ADF00;
+    text-align: center;
+    font-size: 150%;
+    font-family: ,Serif;
+}
+
+.sheet-rolltemplate-PTU .sheet-miss {
+    background-color: #DF0101;
+    text-align: center;
+    font-size: 150%;
+    font-family: "Courier New",Serif;
+}
+
+.sheet-fullfield{
+ width:100%; 
+}
+
+.sheet-shortfield{
+ width:95%; 
+}
+
+.sheet-shortfield2{
+ width:4em;   
+}
+
+.sheet-shortfield3{
+ width:62%;  
+}
+
+.sheet-shortfield4{
+ width:32%;   
+}
+
+.sheet-shortfield5{
+ width:85%;   
+}
+
+.sheet-shortfield6{
+ width: 20%;
+}
+
+.sheet-shortfield7{
+ width: 70%;
+}
+
+.sheet-shortfield8{
+ width: 10%;
+}
+
+.sheet-shortfield9{
+ width: 22%;
+}
+
+.sheet-header{
+ color: white;
+ background: black;
+ text-align: center;
+ width: 100%;
+}
+
+.sheet-banded{
+ background: #E5E5E5;   
+}
+
+.sheet-main-header{
+ width:100%;
+}
+
+.sheet-center-img{
+ margin: 0 auto;
+}
+
+.sheet-minihead{
+ color: white;
+ background: gray;
+ text-align: center;
+}
+
+.sheet-bold{
+    font-weight: bold;
+}
+
+.sheet-allign-1{
+ float:left;
+ margin-top: .5%;
+ margin-bottom: .5%;
+ margin-right: 24.2%;
+}
+
+.sheet-allign-2{
+ float:left;
+ margin-top: .5%;
+ margin-bottom: .5%;
+ margin-right: 5%;
+}
+
+.sheet-allign{
+ float:left;
+ margin-top: .5%;
+ margin-bottom: .5%;
+ margin-right: .2%;
+}
+
+.sheet-textarea{
+    resize: none;
+    border: none;
+    width: 100%;
+    height: 2em;
+}
+
+.sheet-textarea-b{
+    resize: none;
+    border-width: 1px;
+    border-color: black;
+    width: 92.5%;
+    height: 2.75em;
+}
+
+.sheet-textarea-c{
+    resize: none;
+    border-width: 1px;
+    border-color: black;
+    width: 92.5%;
+    height: 5.5em;
+}
+
+.sheet-textarea-d{
+    resize: none;
+    border-width: 1px;
+    border-color: black;
+    width: 92.5%;
+    height: 4em;
+}
+
+.sheet-table tr:nth-child(odd), .sheet-odd-table tr:nth-child(even){
+    background-color: #E5E5E5;
+}
+
+.sheet-table tr:nth-child(even), .sheet-odd-table tr:nth-child(odd){
+    background-color: white;
+}
+
+.sheet-table,
+.sheet-odd-table,
+.sheet-big-table,
+.sheet-horiz-table{
+ width: 100%;
+}
+
+.sheet-table-1{
+ width: 33%;
+}
+
+.sheet-table-header{
+ font-weight: bold;
+}
+
+tr.sheet-2col td.sheet-table-header{
+ width: 40%;
+}
+
+tr.sheet-4col td{
+ width: 30%;
+}
+
+tr.sheet-4evencol td{
+ width: 25%;
+}
+
+tr.sheet-4col td.sheet-table-header{
+ width: 20%;
+}
+
+tr.sheet-15col td{
+ width: 5%;
+}
+
+tr.sheet-15col td.sheet-table-header{
+ width: 13%;
+}
+
+tr.sheet-15col td.sheet-miniroll{
+    width: 2%;
+}
+
+tr.sheet-12col td{
+ width: 4%;
+}
+
+tr.sheet-12col td.sheet-table-header{
+ width: 14%;
+}
+
+tr.sheet-12col td.sheet-miniroll{
+    width: 2%;
+}
+
+tr.sheet-9col td{
+ width: 7%;
+}
+
+tr.sheet-9col td.sheet-table-header{
+ width: 24.3333333%;
+}
+
+tr.sheet-9col td.sheet-miniroll,
+tr.sheet-9col2 td.sheet-miniroll{
+    width: 2%;
+}
+
+tr.sheet-9col2 td.sheet-table-header{
+ width: 8%;
+}
+
+tr.sheet-9col2 td{
+ width: 23.3333333%;
+}
+
+tr.sheet-6col td{
+ width: 24%;
+}
+
+tr.sheet-6col td.sheet-table-header{
+ width: 24%;
+}
+
+tr.sheet-6col td.sheet-miniroll{
+    width: 2%;
+}
+
+tr.sheet-8col td{
+ width: 15%;
+}
+
+tr.sheet-8col td.sheet-table-header{
+ width: 10%;
+}
+
+.sheet-right-align{
+ text-align: right;
+}
+
+.sheet-tough{
+    background-color: #faf39b;
+}
+
+.sheet-cool{
+    background-color: #f1b090;
+}
+
+.sheet-beauty{
+    background-color: #b5c3eb;
+}
+
+.sheet-intelligence{
+     background-color: #bcdc99;
+}
+
+.sheet-cute{
+     background-color: #f8a6cf;
+}
+
+
+.sheet-status-table td{
+    width: 2%;
+}
+
+.sheet-dummy_accuracy_w:checked ~ .sheet-will{
+    width: 14.6666667%;
+}
+
+.sheet-status-table td.sheet-table-header{
+    width: 14.6666667%;
+}
+
+.sheet-12equal td{
+    width: 8.33333333%;
+}
+
+select { margin-bottom: 0; }

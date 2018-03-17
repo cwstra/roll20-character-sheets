@@ -1,0 +1,2518 @@
+<!--Miracle Forumula:
+ceil({n units}/2)
+unit:
+{2, floor(3**([[1d6]]/2-1)-1)}kl1
+-->
+
+<input type="radio" name="attr_tab" class="sheet-trainertab" value="1" title="Trainer" checked="checked" />
+<input type="radio" name="attr_tab" class="sheet-pokemontab" value="2" title="Pokémon" />
+
+<div class="sheet-tab-br"></div>
+
+<div class="sheet-page-wrap">
+<div class="sheet-tabs">
+
+<div class="sheet-tab">
+    <input type="radio" id="tab-1" value = "1" name="attr_tab-group" checked>
+    <label for="tab-1">Basic&nbsp;Info</label>
+    <div class="sheet-content">
+        <h3 class='sheet-header sheet-trainertab'>Pokérole: Trainer Info</h3>
+        <h3 class='sheet-header sheet-pokemontab'>Pokérole: Pokémon Info</h3>
+        <table class='sheet-table sheet-trainertab'>
+            <tr>
+                <td style='width: 20%;' class='sheet-table-header'>
+                    Trainer Name:
+                </td>
+                <td style='width: 70%;'>
+                    <input title="trainer_name" class="sheet-shortfield" name="attr_trainer_name" type="text" />
+                </td>
+                <td style='width: 5%;' class='sheet-table-header'>
+                    Age:
+                </td>
+                <td style='width: 5%;'>
+                    <input title="trainer_name" class="sheet-shortfield" name="attr_age" type="number"/>
+                </td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>
+                    Concept:
+                </td>
+                <td>
+                    <input title="concept" class="sheet-shortfield" name="attr_concept" type="text"/>
+                </td>
+                <td class='sheet-table-header'>
+                    Badges:
+                </td>
+                <td>
+                    <input title="trainer_name" class="sheet-shortfield" name="attr_age" type="number" value='0' min='0'/>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-table sheet-pokemontab'>
+            <tr>
+                <td style='width: 20%;' class='sheet-table-header'>
+                    Nickname:
+                </td>
+                <td style='width: 70%;'>
+                    <input title="pokemon_name" class="sheet-shortfield" name="attr_pokemon_name" type="text" />
+                </td>
+                <td style='width: 5%;' class='sheet-table-header'>
+                    Happiness:
+                </td>
+                <td style='width: 5%;'>
+                    <input title="pokemon_happiness" class="sheet-shortfield" name="attr_pokemon_happiness" type="number" min='0' max='5'/>
+                </td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>
+                    Species:
+                </td>
+                <td>
+                    <input title="species" class="sheet-shortfield" name="attr_species" type="text"/>
+                </td>
+                <td class='sheet-table-header'>
+                    Loyalty:
+                </td>
+                <td>
+                    <input title="pokemon_disobedience" class="sheet-shortfield" name="attr_pokemon_disobedience" type="number" min='0' max='5'/>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-table'>
+            <tr class='sheet-8col'>
+                <td class='sheet-table-header'>
+                    HP:
+                </td>
+                <td>
+                    <div class='sheet-trainertab'>
+                        <input title="HP" class="sheet-shortfield" name="attr_HP" type="number"/>/<input title="HP" class="sheet-shortfield" name="attr_HP_max" type="number"/>
+                    </div>
+                    <div class='sheet-pokemontab'>
+                        <input title="pokemon_HP" class="sheet-shortfield" name="attr_pokemon_HP" type="number"/>/<input title="pokemon_HP" class="sheet-shortfield" name="attr_pokemon_HP_max" type="number"/>
+                    </div>
+                </td>
+                <td class='sheet-table-header'>
+                    Will:
+                </td>
+                <td>
+                    <div class='sheet-trainertab'>
+                        <input title="will" class="sheet-shortfield" name="attr_will" type="number"/>/<input title="will" class="sheet-shortfield" name="attr_will_max" type="number"/>
+                    </div>
+                    <div class='sheet-pokemontab'>
+                        <input title="pokemon_will" class="sheet-shortfield" name="attr_pokemon_will" type="number"/>/<input title="pokemon_will" class="sheet-shortfield" name="attr_pokemon_will_max" type="number"/>
+                    </div>
+                </td>
+                <td class='sheet-table-header'>
+                    <div class='sheet-trainertab'>
+                        Money:
+                    </div>
+                    <div class='sheet-pokemontab'>
+                        Level:
+                    </div>
+                </td>
+                <td>
+                    <div class='sheet-trainertab'>
+                        <input title="money" class="sheet-shortfield" name="attr_money" type="number"/>
+                    </div>
+                    <div class='sheet-pokemontab'>
+                        <input title="level" class="sheet-shortfield" name="attr_level" type="number"/>
+                    </div>
+                </td>
+                <td class='sheet-table-header'>
+                    EXP:
+                </td>
+               <td>
+                    <div class='sheet-trainertab'>
+                        <input title="EXP" class="sheet-shortfield" name="attr_EXP" type="number"/>
+                    </div>
+                    <div class='sheet-pokemontab'>
+                        <input title="pokemon_EXP" class="sheet-shortfield" name="attr_pokemon_EXP" type="number"/>
+                    </div>
+                </td>
+            </tr>
+            <tr class='sheet-8col sheet-pokemontab'>
+                <td class='sheet-table-header'>
+                    Size:
+                </td>
+                <td>
+                    <input title="pokemon_size" class="sheet-shortfield" name="attr_pokemon_size" type="text"/>
+                </td>
+                <td class='sheet-table-header'>
+                    Weight:
+                </td>
+                <td>
+                    <input title="pokemon_weight" class="sheet-shortfield" name="attr_pokemon_weight" type="text"/>
+                </td>
+                <td class='sheet-table-header'>
+                    Held Item:
+                </td>
+                <td>
+                    <input title="pokemon_held_item" class="sheet-shortfield" name="attr_pokemon_held_item" type="text"/>
+                </td>
+                <td class='sheet-table-header'>
+                    Disobedience
+                </td>
+                <td>
+                    <input title="pokemon_disobedience" class="sheet-shortfield" name="attr_pokemon_disobedience" type="number" min='0' max='5'/>
+                </td>
+            </tr>
+        </table>
+        <h4 class='sheet-minihead sheet-trainertab'>Current Party Pokémon</h4>
+        <table class='sheet-odd-table sheet-trainertab'>
+            <tr class='sheet-2col'>
+                <td>
+                    <input title="party_pokemon_1" class="sheet-shortfield" name="attr_party_pokemon_1" type="text" placeholder='Pokémon 1' />
+                </td>
+                <td class='sheet-right-align'>
+                    <input title="party_pokemon_2" class="sheet-shortfield" name="attr_party_pokemon_2" type="text" placeholder='Pokémon 2'/>
+                </td>
+            </tr>
+            <tr class='sheet-2col'>
+                <td>
+                    <input title="party_pokemon_3" class="sheet-shortfield" name="attr_party_pokemon_3" type="text" placeholder='Pokémon 3'/>
+                </td>
+                <td class='sheet-right-align'>
+                    <input title="party_pokemon_4" class="sheet-shortfield" name="attr_party_pokemon_4" type="text" placeholder='Pokémon 4'/>
+                </td>
+            </tr>
+            <tr class='sheet-2col'>
+                <td>
+                    <input title="party_pokemon_5" class="sheet-shortfield" name="attr_party_pokemon_5" type="text" placeholder='Pokémon 5'/>
+                </td>
+                <td class='sheet-right-align'>
+                    <input title="party_pokemon_6" class="sheet-shortfield" name="attr_party_pokemon_6" type="text" placeholder='Pokémon 6'/>
+                </td>
+            </tr>
+        </table>
+        <h4 class='sheet-minihead sheet-trainertab'>Status Ailments</h4>
+        <table class='sheet-table sheet-status-table sheet-trainertab'>
+            <tr>
+                <td class='sheet-table-header'>Burn 1:</td>
+                <td><input title='st_burn1' type='checkbox' value=1 name='attr_st_burn1'/></td>
+                <td class='sheet-table-header'>Burn 2:</td>
+                <td><input title='st_burn2' type='checkbox' value=1 name='attr_st_burn2'/></td>
+                <td class='sheet-table-header'>Burn 3:</td>
+                <td><input title='st_burn3' type='checkbox' value=1 name='attr_st_burn3'/></td>
+                <td class='sheet-table-header'>Frozen:</td>
+                <td><input type='checkbox' name='attr_st_froz'/></td>
+                <td class='sheet-table-header'>Paralysis:</td>
+                <td><input title='st_para' type='checkbox' value=1 name='attr_st_para'/></td>
+                <td class='sheet-table-header'>Poisoned:</td>
+                <td><input title='st_pois' type='checkbox' value=1 name='attr_st_pois'/></td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>Badly Poisoned:</td>
+                <td><input title='st_bad_pois' type='checkbox' value=1 name='attr_st_bad_pois'/></td>
+                <td class='sheet-table-header'>Sleep:</td>
+                <td><input title='st_sleep' type='checkbox' value=1 name='attr_st_sleep'/></td>
+                <td class='sheet-table-header'>Confused:</td>
+                <td><input title='st_conf' type='checkbox' value=1 name='attr_st_conf'/></td>
+                <td class='sheet-table-header'>Disabled:</td>
+                <td><input title='st_disa' type='checkbox' value=1 name='attr_st_disa'/></td>
+                <td class='sheet-table-header'>Flinch:</td>
+                <td><input title='st_flin' type='checkbox' value=1 name='attr_st_flin'/></td>
+                <td class='sheet-table-header'>In Love:</td>
+                <td><input title='st_love' type='checkbox' value=1 name='attr_st_love'/></td>
+            </tr>
+        </table>
+        <h4 class='sheet-minihead'>Nature</h4>
+        <table class='sheet-table'>
+            <tr>
+                <td>
+                    <div class='sheet-trainertab'>
+                        <input title="nature_name" class="sheet-fullfield" name="attr_nature" type="text" placeholder='Nature Name'/>
+                    </div>
+                    <div class='sheet-pokemontab'>
+                        <input title="pokemon_nature_name" class="sheet-fullfield" name="attr_pokemon_nature" type="text" placeholder='Nature Name'/>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-trainertab'>
+                        <input title="nature_keywords" class="sheet-fullfield" name="attr_nature" type="text" placeholder='Nature Keywords'/>
+                    </div>
+                    <div class='sheet-pokemontab'>
+                        <input title="pokemon_nature_keywords" class="sheet-fullfield" name="attr_pokemon_nature" type="text" placeholder='Nature Keywords'/>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=2>
+                    <div class='sheet-trainertab'>
+                        <textarea title="nature_desc" class='sheet-boxsizingBorder' name="attr_nature_desc" rows="10"></textarea>
+                    </div>
+                    <div class='sheet-pokemontab'>
+                        <textarea title="pokemon_nature_desc" class='sheet-boxsizingBorder' name="attr_pokemon_nature_desc" rows="10"></textarea>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="sheet-tab sheet-pokemontab">
+    <input type="radio" id="tab-2" value = "2" name="attr_tab-group">
+    <label for="tab-2">Battle</label>
+    <div class="sheet-content">
+        <h3 class='sheet-header'>Basic Info</h3> 
+        <h4 class='sheet-minihead'>Battle Stats</h4>
+        <table class='sheet-table'>
+            <tr>
+                <td>
+                    Accuracy:
+                </td>
+                <td>
+                    <input title='pokemon_Accuracy' class='sheet-shortfield2' type="number" name="attr_pokemon_Accuracy"/>
+                </td>
+                <td>
+                    Initiative:
+                </td>
+                <td>
+                    <input title='pokemon_Dexterity' class='sheet-shortfield2' type="number" name="attr_InitD"/>
+                    +
+                    <input title='pokemon_Survival' class='sheet-shortfield2' type="number" name="attr_InitS"/>
+                    +
+                    <input title='pokemon_Alert' class='sheet-shortfield2' type="number" name="attr_InitA"/>
+                    =
+                    <input title='pokemon_Initiative' class='sheet-shortfield2' type="number" name="attr_pokemon_Initiative"/>
+                </td>
+                <td>
+                    Def:
+                </td>
+                <td>
+                    <input title='pokemon_Vitality' class='sheet-shortfield2' type="number" name="attr_DefV"/>
+                    +
+                    <select title='Def_Stage' class='sheet-shortfield2' name='attr_Def_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    =
+                    <input title='Def' type="number" name="attr_Def" class=sheet-shortfield2/>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-odd-table'>
+            <tr>
+                <td>
+                    Evasion:
+                </td>
+                <td>
+                    <input title='pokemon_Dexterity' class='sheet-shortfield2' type="number" name="attr_EvaD"/>
+                    +
+                    <input title='pokemon_Fight' class='sheet-shortfield2' type="number" name="attr_EvaF"/>
+                    +
+                    <input title='pokemon_Evasion' class='sheet-shortfield2' type="number" name="attr_EvaE"/>
+                    +
+                    <select title='SpDef_Stage' class='sheet-shortfield2' name='attr_Evasion_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    =
+                    <input title='pokemon_Evasion_Battle' class='sheet-shortfield2' type="number" name="attr_pokemon_Evasion_Battle"/>
+                </td>
+                <td>
+                    Sp. Def:
+                </td>
+                <td>
+                    <input title='pokemon_Vitality' class='sheet-shortfield2' type="number" name="attr_SpDefV"/>
+                    +
+                    <select title='SpDef_Stage' class='sheet-shortfield2' name='attr_SpDef_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    =
+                    <input title='SpDef' type="number" name="attr_SpDef" class=sheet-shortfield2/>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-table'>
+            <tr>
+                <td>
+                    Strength:
+                </td>
+                <td>
+                    <input title='pokemon_Strength' class='sheet-shortfield2' type="number" name="attr_StrengthS"/>
+                    +
+                    <input title='pokemon_Strength_Mod' class='sheet-shortfield2' type="number" name="attr_pokemon_Strength_Mod"/>
+                    =
+                    <input title='pokemon_Battle_Strength' class='sheet-shortfield2' type="number" name="attr_pokemon_Battle_Strength"/>
+                </td>
+                <td>
+                    Dexterity:
+                </td>
+                <td>
+                    <input title='pokemon_Dexterity' class='sheet-shortfield2' type="number" name="attr_DexterityS"/>
+                    +
+                    <input title='pokemon_Dexterity_Mod' class='sheet-shortfield2' type="number" name="attr_pokemon_Dexterity_Mod"/>
+                    =
+                    <input title='pokemon_Battle_Dexterity' class='sheet-shortfield2' type="number" name="attr_pokemon_Battle_Dexterity"/>
+                </td>
+                <td>
+                    Special:
+                </td>
+                <td>
+                    <input title='pokemon_Special' class='sheet-shortfield2' type="number" name="attr_SpecialS"/>
+                    +
+                    <input title='pokemon_Special_Mod' class='sheet-shortfield2' type="number" name="attr_pokemon_Special_Mod"/>
+                    =
+                    <input title='pokemon_Battle_Special' class='sheet-shortfield2' type="number" name="attr_pokemon_Battle_Special"/>
+                </td>
+            </tr>
+        </table>
+        <h4 class='sheet-minihead'>Status Ailments</h4>
+        <table class='sheet-table sheet-status-table'>
+            <tr>
+                <td class='sheet-table-header'>Burn 1:</td>
+                <td><input title='pokemon_st_burn1' type='checkbox' value=1 name='attr_pokemon_st_burn1'/></td>
+                <td class='sheet-table-header'>Burn 2:</td>
+                <td><input title='pokemon_st_burn2' type='checkbox' value=1 name='attr_pokemon_st_burn2'/></td>
+                <td class='sheet-table-header'>Burn 3:</td>
+                <td><input title='pokemon_st_burn3' type='checkbox' value=1 name='attr_pokemon_st_burn3'/></td>
+                <td class='sheet-table-header'>Frozen:</td>
+                <td><input type='checkbox' name='attr_st_froz'/></td>
+                <td class='sheet-table-header'>Paralysis:</td>
+                <td><input title='pokemon_st_para' type='checkbox' value=1 name='attr_pokemon_st_para'/></td>
+                <td class='sheet-table-header'>Poisoned:</td>
+                <td><input title='pokemon_st_pois' type='checkbox' value=1 name='attr_pokemon_st_pois'/></td>
+            </tr>
+            <tr>
+                <td class='sheet-table-header'>Badly Poisoned:</td>
+                <td><input title='pokemon_st_bad_pois' type='checkbox' value=1 name='attr_pokemon_st_bad_pois'/></td>
+                <td class='sheet-table-header'>Sleep:</td>
+                <td><input title='pokemon_st_sleep' type='checkbox' value=1 name='attr_pokemon_st_sleep'/></td>
+                <td class='sheet-table-header'>Confused:</td>
+                <td><input title='pokemon_st_conf' type='checkbox' value=1 name='attr_pokemon_st_conf'/></td>
+                <td class='sheet-table-header'>Disabled:</td>
+                <td><input title='pokemon_st_disa' type='checkbox' value=1 name='attr_pokemon_st_disa'/></td>
+                <td class='sheet-table-header'>Flinch:</td>
+                <td><input title='pokemon_st_flin' type='checkbox' value=1 name='attr_pokemon_st_flin'/></td>
+                <td class='sheet-table-header'>In Love:</td>
+                <td><input title='pokemon_st_love' type='checkbox' value=1 name='attr_pokemon_st_love'/></td>
+            </tr>
+        </table>
+        <input type="checkbox" class="sheet-arrow" name="attr_Move_Hide"/><span></span>
+        <h3 class='sheet-header'>Stat Stages</h3>
+        <h3 class='sheet-minihead sheet-stagelist'>Physical Attributes</h3>
+        <table class='sheet-table sheet-stagelist'>
+            <tr class='sheet-9col2'>
+                <td class='sheet-table-header sheet-tough'>
+                    Strength:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Tough" class="sheet-shortfield" name="attr_dummy_stage_Tough" type="number" value='1'/>
+                    +
+                    <select title='pokemon_Tough_Stage' class='sheet-shortfield2' name='attr_pokemon_Tough_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Tough_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Tough_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_StrengthCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Dexterity:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Dexterity" class="sheet-shortfield" name="attr_dummy_stage_Dexterity" type="number" value='1'/>
+                    +
+                    <select title='pokemon_Dexterity_Stage' class='sheet-shortfield2' name='attr_pokemon_Dexterity_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Dexterity_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Dexterity_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_VitalityCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Vitality:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Vitality" class="sheet-shortfield" name="attr_dummy_stage_Vitality" type="number" value='1'/>
+                    +
+                    <select title='pokemon_Vitality_Stage' class='sheet-shortfield2' name='attr_pokemon_Vitality_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Vitality_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Vitality_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_DexterityCheck'></button>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-table sheet-stagelist'>
+            <tr class='sheet-6col'>
+                <td class='sheet-table-header sheet-cute'>
+                    Special:
+                </td>
+                <td class='sheet-cute'>
+                    <input title="pokemon_Special" class="sheet-shortfield" name="attr_dummy_stage_Special" type="number" value='1'/>
+                    +
+                    <select title='pokemon_Special_Stage' class='sheet-shortfield2' name='attr_pokemon_Special_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Special_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Special_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-cute sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_DexterityCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-intelligence'>
+                    Insight:
+                </td>
+                <td class='sheet-intelligence'>
+                    <input title="pokemon_Insight" class="sheet-shortfield" name="attr_dummy_stage_Insight" type="number" value='1'/>
+                    +
+                    <select title='pokemon_Insight_Stage' class='sheet-shortfield2' name='attr_pokemon_Insight_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Insight_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Insight_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-intelligence sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_InsightCheck'></button>
+                </td>
+            </tr>
+        </table>
+        <h3 class='sheet-minihead sheet-stagelist'>Social Attributes</h3>
+        <table class='sheet-table sheet-stagelist'>
+            <tr class='sheet-9col2'>
+                <td class='sheet-table-header sheet-tough'>
+                    Tough:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Tough" class="sheet-shortfield" name="attr_dummy_stage_Tough" type="number" value='1'/>
+                    +
+                    <select title='pokemon_Tough_Stage' class='sheet-shortfield2' name='attr_pokemon_Tough_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Tough_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Tough_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_ToughCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Cool:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Cool" class="sheet-shortfield" name="attr_dummy_stage_Cool" type="number" value='1'/>
+                    +
+                    <select title='pokemon_Cool_Stage' class='sheet-shortfield2' name='attr_pokemon_Cool_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Cool_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Cool_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_CoolCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Beauty:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Beauty" class="sheet-shortfield" name="attr_dummy_stage_Beauty" type="number" value='1'/>
+                    +
+                    <select title='pokemon_Beauty_Stage' class='sheet-shortfield2' name='attr_pokemon_Beauty_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Beauty_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Beauty_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_BeautyCheck'></button>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-table sheet-stagelist'>
+            <tr class='sheet-6col'>
+                <td class='sheet-table-header sheet-cute'>
+                    Cute:
+                </td>
+                <td class='sheet-cute'>
+                    <input title="pokemon_Cute" class="sheet-shortfield" name="attr_dummy_stage_Cute" type="number" value='1'/>
+                    +
+                    <select title='pokemon_Cute_Stage' class='sheet-shortfield2' name='attr_pokemon_Cute_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Cute_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Cute_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-cute sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_DexterityCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-intelligence'>
+                    Smart:
+                </td>
+                <td class='sheet-intelligence'>
+                    <input title="pokemon_Smart" class="sheet-shortfield" name="attr_dummy_stage_Smart" type="number" value='1'/>
+                    +
+                    <select title='pokemon_Smart_Stage' class='sheet-shortfield2' name='attr_pokemon_Smart_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Smart_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Smart_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-intelligence sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_SmartCheck'></button>
+                </td>
+            </tr>
+        </table>
+        <h3 class='sheet-minihead sheet-stagelist'>Skills</h3>
+        <table class='sheet-table sheet-stagelist'>
+            <tr class='sheet-9col2'>
+                <td class='sheet-table-header sheet-tough'>
+                    Fight:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Fight" class="sheet-shortfield" name="attr_dummy_stage_Fight" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Fight_Stage' class='sheet-shortfield2' name='attr_pokemon_Fight_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Fight_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Fight_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_FightCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Survival:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Survival" class="sheet-shortfield" name="attr_dummy_stage_Survival" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Survival_Stage' class='sheet-shortfield2' name='attr_pokemon_Survival_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Survival_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Survival_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_SurvivalCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Contest:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Contest" class="sheet-shortfield" name="attr_dummy_stage_Contest" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Contest_Stage' class='sheet-shortfield2' name='attr_pokemon_Contest_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Contest_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Contest_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_ContestCheck'></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=9>
+                    <h3 class='sheet-minihead'>Specialities</h3>
+                </td>
+            </tr>
+            <tr class='sheet-9col2'>
+                <td class='sheet-table-header sheet-tough'>
+                    Brawl:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Brawl" class="sheet-shortfield" name="attr_dummy_stage_Brawl" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Brawl_Stage' class='sheet-shortfield2' name='attr_pokemon_Brawl_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Brawl_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Brawl_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_BrawlCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Alert:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Alert" class="sheet-shortfield" name="attr_dummy_stage_Alert" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Alert_Stage' class='sheet-shortfield2' name='attr_pokemon_Alert_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Alert_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Alert_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_AlertCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Allure:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Allure" class="sheet-shortfield" name="attr_dummy_stage_Allure" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Allure_Stage' class='sheet-shortfield2' name='attr_pokemon_Allure_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Allure_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Allure_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_AllureCheck'></button>
+                </td>
+            </tr>
+            <tr class='sheet-9col2'>
+                <td class='sheet-table-header sheet-tough'>
+                    Channel:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Throw" class="sheet-shortfield" name="attr_dummy_stage_Throw" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Throw_Stage' class='sheet-shortfield2' name='attr_pokemon_Throw_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Throw_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Throw_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_ChannelCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Athletic:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Athletic" class="sheet-shortfield" name="attr_dummy_stage_Athletic" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Athletic_Stage' class='sheet-shortfield2' name='attr_pokemon_Athletic_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Athletic_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Athletic_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_AthleticCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Etiquette:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Etiquette" class="sheet-shortfield" name="attr_dummy_stage_Etiquette" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Etiquette_Stage' class='sheet-shortfield2' name='attr_pokemon_Etiquette_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Etiquette_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Etiquette_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_EtiquetteCheck'></button>
+                </td>
+            </tr>
+            <tr class='sheet-9col2'>
+                <td class='sheet-table-header sheet-tough'>
+                    Evasion:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Evasion" class="sheet-shortfield" name="attr_dummy_stage_Evasion" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Evasion_Stage' class='sheet-shortfield2' name='attr_pokemon_Evasion_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Evasion_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Evasion_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_EvasionCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Nature:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Nature" class="sheet-shortfield" name="attr_dummy_stage_Nature" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Nature_Stage' class='sheet-shortfield2' name='attr_pokemon_Nature_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Nature_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Nature_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_NatureCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Intimidate:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Intimidate" class="sheet-shortfield" name="attr_dummy_stage_Intimidate" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Intimidate_Stage' class='sheet-shortfield2' name='attr_pokemon_Intimidate_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Intimidate_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Intimidate_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_IntimidateCheck'></button>
+                </td>
+            </tr>
+            <tr class='sheet-9col2'>
+                <td class='sheet-table-header sheet-tough'>
+                    Clash:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Clash" class="sheet-shortfield" name="attr_dummy_stage_Clash" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Clash_Stage' class='sheet-shortfield2' name='attr_pokemon_Clash_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Clash_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Clash_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_WeaponsCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Stealth:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Stealth" class="sheet-shortfield" name="attr_dummy_stage_Stealth" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Stealth_Stage' class='sheet-shortfield2' name='attr_pokemon_Stealth_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Stealth_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Stealth_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_StealthCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Perform:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Perform" class="sheet-shortfield" name="attr_dummy_stage_Perform" type="number" value='0'/>
+                    +
+                    <select title='pokemon_Perform_Stage' class='sheet-shortfield2' name='attr_pokemon_Perform_Stage'>
+                        <option value='-3'>-3</option> 
+                        <option value='-2'>-2</option>
+                        <option value='-1'>-1</option>
+                        <option value='0'>0</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option> 
+                    </select>
+                    +
+                    <input title="pokemon_Perform_Ability_Bonus" class="sheet-shortfield" name="attr_pokemon_Perform_Ability_Bonus" type="number" value='0'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_PerformCheck'></button>
+                </td>
+            </tr>
+        </table>
+        <h3 class='sheet-header'>Abilities</h3> 
+        <fieldset class='repeating_miniabilities'>
+            <h4 class='sheet-minihead'>Ability</h4>
+            <table class='sheet-table'>
+                <tr>
+                    <td class='sheet-table-header'>Name:</td>
+                    <td><input title='repeating_abilities_X_Ability_Name' class='sheet-shortfield' name='attr_Ability_Name' type='text'></td>
+                </tr>
+            </table>
+        </fieldset>
+        <h3 class='sheet-header'>Moves</h3> 
+        <fieldset class='repeating_minimoves'>
+            <h4 class='sheet-minihead'>Move</h4>
+            <table class='sheet-table'>
+                <tr>
+                    <td colspan=1 class='sheet-table-header'>Name:</td>
+                    <td colspan=11><input title='repeating_moves_X_Move_Name' class='sheet-shortfield' name='attr_Move_Name' type='text'></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+<div class="sheet-tab">
+    <input type="radio" id="tab-3" value = "3" name="attr_tab-group">
+    <label for="tab-3">Attributes/ Skills/ Specialities</label>
+    <div class="sheet-content">
+        <h3 class='sheet-minihead'>Physical Attributes</h3>
+        <table class='sheet-table sheet-trainertab'>
+            <tr class='sheet-12col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Strength:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="Strength" class="sheet-shortfield" name="attr_Strength" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_StrengthCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Dexterity:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="Dexterity" class="sheet-shortfield" name="attr_Dexterity" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_VitalityCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Vitality:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="Vitality" class="sheet-shortfield" name="attr_Vitality" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_DexterityCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-intelligence'>
+                    Insight:
+                </td>
+                <td class='sheet-intelligence'>
+                    <input title="Insight" class="sheet-shortfield" name="attr_Insight" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-intelligence sheet-miniroll'>
+                    <button type='roll' value='' name='roll_InsightCheck'></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=12>
+                    <h3 class='sheet-minihead'>Social Attributes</h3>
+                </td>
+            </tr>
+            <tr class='sheet-12col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Tough:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="Tough" class="sheet-shortfield" name="attr_Tough" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_ToughCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Cool:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="Cool" class="sheet-shortfield" name="attr_Cool" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_CoolCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Beauty:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="Beauty" class="sheet-shortfield" name="attr_Beauty" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_BeautyCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-intelligence'>
+                    Intelligence:
+                </td>
+                <td class='sheet-intelligence'>
+                    <input title="Intelligence" class="sheet-shortfield" name="attr_Intelligence" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-intelligence sheet-miniroll'>
+                    <button type='roll' value='' name='roll_IntelligenceCheck'></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=12>
+                    <h3 class='sheet-minihead'>Skills</h3>
+                </td>
+            </tr>
+            <tr class='sheet-12col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Fight:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="Fight" class="sheet-shortfield" name="attr_Fight" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_FightCheck'></button>
+                </td>
+                
+                <td class='sheet-table-header sheet-cool'>
+                    Survival:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="Survival" class="sheet-shortfield" name="attr_Survival" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_SurvivalCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Contest:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="Contest" class="sheet-shortfield" name="attr_Contest" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_ContestCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-intelligence'>
+                    Knowledge:
+                </td>
+                <td class='sheet-intelligence'>
+                    <input title="Knowledge" class="sheet-shortfield" name="attr_Knowledge" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-intelligence sheet-miniroll'>
+                    <button type='roll' value='' name='roll_KnowledgeCheck'></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=12>
+                    <h3 class='sheet-minihead'>Specialities</h3>
+                </td>
+            </tr>
+            <tr class='sheet-12col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Brawl:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="Brawl" class="sheet-shortfield" name="attr_Brawl" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_BrawlCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Alert:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="Alert" class="sheet-shortfield" name="attr_Alert" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_AlertCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Empathy:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="Empathy" class="sheet-shortfield" name="attr_Empathy" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_EmpathyCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-intelligence'>
+                    Crafts:
+                </td>
+                <td class='sheet-intelligence'>
+                    <input title="Crafts" class="sheet-shortfield" name="attr_Crafts" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-intelligence sheet-miniroll'>
+                    <button type='roll' value='' name='roll_CraftsCheck'></button>
+                </td>
+            </tr>
+            <tr class='sheet-12col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Throw:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="Throw" class="sheet-shortfield" name="attr_Throw" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_ThrowCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Athletic:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="Athletic" class="sheet-shortfield" name="attr_Athletic" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_AthleticCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Etiquette:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="Etiquette" class="sheet-shortfield" name="attr_Etiquette" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_EtiquetteCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-intelligence'>
+                    Lore:
+                </td>
+                <td class='sheet-intelligence'>
+                    <input title="Lore" class="sheet-shortfield" name="attr_Lore" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-intelligence sheet-miniroll'>
+                    <button type='roll' value='' name='roll_LoreCheck'></button>
+                </td>
+            </tr>
+            <tr class='sheet-12col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Evasion:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="Evasion" class="sheet-shortfield" name="attr_Evasion" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_EvasionCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Nature:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="Nature" class="sheet-shortfield" name="attr_Nature" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_NatureCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Intimidate:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="Intimidate" class="sheet-shortfield" name="attr_Intimidate" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_IntimidateCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-intelligence'>
+                    Medicine:
+                </td>
+                <td class='sheet-intelligence'>
+                    <input title="Medicine" class="sheet-shortfield" name="attr_Medicine" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-intelligence sheet-miniroll'>
+                    <button type='roll' value='' name='roll_MedicineCheck'></button>
+                </td>
+            </tr>
+            <tr class='sheet-12col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Weapons:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="Weapons" class="sheet-shortfield" name="attr_Weapons" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_WeaponsCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Stealth:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="Stealth" class="sheet-shortfield" name="attr_Stealth" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_StealthCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Perform:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="Perform" class="sheet-shortfield" name="attr_Perform" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_PerformCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-intelligence'>
+                    Science:
+                </td>
+                <td class='sheet-intelligence'>
+                    <input title="Science" class="sheet-shortfield" name="attr_Science" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-intelligence sheet-miniroll'>
+                    <button type='roll' value='' name='roll_ScienceCheck'></button>
+                </td>
+            </tr>
+        </table>        
+        <table class='sheet-table sheet-pokemontab'>
+            <tr class='sheet-15col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Strength:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Strength" class="sheet-shortfield" name="attr_pokemon_Strength" type="number" value='1' min='1' max='10'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_StrengthCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Dexterity:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Dexterity" class="sheet-shortfield" name="attr_pokemon_Dexterity" type="number" value='1' min='1' max='10'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_VitalityCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Vitality:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Vitality" class="sheet-shortfield" name="attr_pokemon_Vitality" type="number" value='1' min='1' max='10'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_DexterityCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cute'>
+                    Special:
+                </td>
+                <td class='sheet-cute'>
+                    <input title="pokemon_Special" class="sheet-shortfield" name="attr_pokemon_Special" type="number" value='1' min='1' max='10'/>
+                </td>
+                <td class='sheet-cute sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_DexterityCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-intelligence'>
+                    Insight:
+                </td>
+                <td class='sheet-intelligence'>
+                    <input title="pokemon_Insight" class="sheet-shortfield" name="attr_pokemon_Insight" type="number" value='1' min='1' max='10'/>
+                </td>
+                <td class='sheet-intelligence sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_InsightCheck'></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=15>
+                    <h3 class='sheet-minihead'>Social Attributes</h3>
+                </td>
+            </tr>
+            <tr class='sheet-15col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Tough:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Tough" class="sheet-shortfield" name="attr_pokemon_Tough" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_ToughCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Cool:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Cool" class="sheet-shortfield" name="attr_pokemon_Cool" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_CoolCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Beauty:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Beauty" class="sheet-shortfield" name="attr_pokemon_Beauty" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_BeautyCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cute'>
+                    Cute:
+                </td>
+                <td class='sheet-cute'>
+                    <input title="pokemon_Cute" class="sheet-shortfield" name="attr_pokemon_Cute" type="number" value='1' min='1' max='10'/>
+                </td>
+                <td class='sheet-cute sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_DexterityCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-intelligence'>
+                    Smart:
+                </td>
+                <td class='sheet-intelligence'>
+                    <input title="pokemon_Smart" class="sheet-shortfield" name="attr_pokemon_Smart" type="number" value='1' min='1' max='5'/>
+                </td>
+                <td class='sheet-intelligence sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_SmartCheck'></button>
+                </td>
+            </tr>
+        </table>
+        <h3 class='sheet-minihead sheet-pokemontab'>Skills</h3>
+        <table class='sheet-table sheet-pokemontab'>
+            <tr class='sheet-9col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Fight:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Fight" class="sheet-shortfield" name="attr_pokemon_Fight" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_FightCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Survival:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Survival" class="sheet-shortfield" name="attr_pokemon_Survival" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_SurvivalCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Contest:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Contest" class="sheet-shortfield" name="attr_pokemon_Contest" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_ContestCheck'></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=9>
+                    <h3 class='sheet-minihead'>Specialities</h3>
+                </td>
+            </tr>
+            <tr class='sheet-9col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Brawl:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Brawl" class="sheet-shortfield" name="attr_pokemon_Brawl" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_BrawlCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Alert:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Alert" class="sheet-shortfield" name="attr_pokemon_Alert" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_AlertCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Allure:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Allure" class="sheet-shortfield" name="attr_pokemon_Allure" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_AllureCheck'></button>
+                </td>
+            </tr>
+            <tr class='sheet-9col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Channel:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Throw" class="sheet-shortfield" name="attr_pokemon_Throw" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_ChannelCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Athletic:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Athletic" class="sheet-shortfield" name="attr_pokemon_Athletic" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_AthleticCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Etiquette:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Etiquette" class="sheet-shortfield" name="attr_pokemon_Etiquette" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_EtiquetteCheck'></button>
+                </td>
+            </tr>
+            <tr class='sheet-9col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Evasion:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Evasion" class="sheet-shortfield" name="attr_pokemon_Evasion" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_EvasionCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Nature:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Nature" class="sheet-shortfield" name="attr_pokemon_Nature" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_NatureCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Intimidate:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Intimidate" class="sheet-shortfield" name="attr_pokemon_Intimidate" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_IntimidateCheck'></button>
+                </td>
+            </tr>
+            <tr class='sheet-9col'>
+                <td class='sheet-table-header sheet-tough'>
+                    Clash:
+                </td>
+                <td class='sheet-tough'>
+                    <input title="pokemon_Clash" class="sheet-shortfield" name="attr_pokemon_Clash" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-tough sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_WeaponsCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-cool'>
+                    Stealth:
+                </td>
+                <td class='sheet-cool'>
+                    <input title="pokemon_Stealth" class="sheet-shortfield" name="attr_pokemon_Stealth" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-cool sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_StealthCheck'></button>
+                </td>
+                <td class='sheet-table-header sheet-beauty'>
+                    Perform:
+                </td>
+                <td class='sheet-beauty'>
+                    <input title="pokemon_Perform" class="sheet-shortfield" name="attr_pokemon_Perform" type="number" value='0' min='0' max='5'/>
+                </td>
+                <td class='sheet-beauty sheet-miniroll'>
+                    <button type='roll' value='' name='roll_pokemon_PerformCheck'></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="sheet-tab sheet-trainertab">
+    <input type="radio" id="tab-4" value = "4" name="attr_tab-group">
+    <label for="tab-4">Inventory</label>
+    <div class="sheet-content">
+        <div class='sheet-3colrow'>
+            <div class='col'>
+                <h4 class='sheet-minihead'>Potions</h4>
+                <table class='sheet-odd-table'>
+                    <tr>
+                        <td>
+                            Unopened
+                        </td>
+                        <td>
+                            <input title='PotionQuantity' type='number' class='sheet-shortfield' name='attr_PotionQuantity' min='0'/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Spare Doses
+                        </td>
+                        <td>
+                            <input title='PotionDoses' type='number' class='sheet-shortfield' name='attr_PotionDoses' min='0' max='2'/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class='col'>
+                <h4 class='sheet-minihead'>Super Potions</h4>
+                <table class='sheet-odd-table'>
+                    <tr>
+                        <td>
+                            Unopened
+                        </td>
+                        <td>
+                            <input title='SuperPotionQuantity' type='number' class='sheet-shortfield' name='attr_SuperPotionQuantity' min='0'/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Spare Doses
+                        </td>
+                        <td>
+                            <input title='SuperPotionDoses' type='number' class='sheet-shortfield' name='attr_SuperPotionDoses' min='0' max='4'/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class='col'>
+                <h4 class='sheet-minihead'>Hyper Potions</h4>
+                <table class='sheet-odd-table'>
+                    <tr>
+                        <td>
+                            Unopened
+                        </td>
+                        <td>
+                            <input title='HyperPotionQuantity' type='number' class='sheet-shortfield' name='attr_HyperPotionQuantity' min='0'/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Spare Doses
+                        </td>
+                        <td>
+                            <input title='HyperPotionDoses' class='sheet-shortfield' name='attr_HyperPotionDoses' min='0' max='14'/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    <h4 class='sheet-minihead'>Other Inventory Items</h4>
+    <table class='sheet-big-table' style = "width:100%;">
+        <tr>
+            <th style = "width:45%;">Item Name</th>
+            <th style = "width:45%;">Description</th>
+            <th style = "width:5%;">Amount</th>
+        </tr>
+    </table>
+    <fieldset class='repeating_inventory'>
+        <table class='sheet-big-table' style = "width:100%;">
+            <tr>
+                <td class='sheet-shortfield6' style = "width:45%;"><input title='repeating_inventory_X_InventoryName' type='text' class='sheet-shortfield' name='attr_InventoryName' /></td>
+                <td class='sheet-shortfield7' style = "width:45%;"><input title='repeating_inventory_X_InventoryDesc' type='text' class='sheet-shortfield' name='attr_InventoryDesc' /></td>
+                <td class='sheet-shortfield8' style = "width:5%;"><input title='repeating_inventory_X_InventoryQuantity' type='number' class='sheet-shortfield' name='attr_InventoryQuantity' min='0'/></td>
+            </tr>
+        </table>
+    </fieldset>
+    </div>
+</div>
+<div class="sheet-tab sheet-pokemontab">
+    <input type="radio" id="tab-5" value = "5" name="attr_tab-group">
+    <label for="tab-5">Abilities/ Moves</label>
+    <div class="sheet-content">
+        <h3 class='sheet-header'>Abilities</h3> 
+        <fieldset class='repeating_abilities'>
+            <input type="checkbox" class="sheet-arrow" name="attr_Ability_Hide"/><span></span>
+            <h4 class='sheet-minihead'>Ability</h4>
+            <table class='sheet-table'>
+                <tr>
+                    <td class='sheet-table-header'>Name:</td>
+                    <td><input title='repeating_abilities_X_Ability_Name' class='sheet-shortfield' name='attr_Ability_Name' type='text'></td>
+                </tr>
+                <tr class="sheet-movelist">
+                    <td class='sheet-table-header'>Description:</td>
+                    <td><textarea title='repeating_abilities_X_Ability_Description' class='sheet-textarea-b' name='attr_Ability_Description'></textarea></td>
+                </tr>
+                <tr class="sheet-movelist">
+                    <td class='sheet-table-header'>Effect:</td>
+                    <td><textarea title='repeating_abilities_X_Ability_Effect' class='sheet-textarea-c' name='attr_Ability_Effect'></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+        <h3 class='sheet-header'>Moves</h3> 
+        <fieldset class='repeating_moves'>
+            <br/>
+            <input type="checkbox" class="sheet-arrow" name="attr_Move_Hide"/><span></span>
+            <h4 class='sheet-minihead'>Move</h4>
+            <table class='sheet-table'>
+                <tr class='sheet-12equal'>
+                    <td></td><td></td><td></td>
+                    <td></td><td></td><td></td>
+                    <td></td><td></td><td></td>
+                    <td></td><td></td><td></td>
+                </tr>
+                <tr class='sheet-dummy'>
+                    <td colspan=12></td>
+                </tr>
+                <tr>
+                    <td colspan=1 class='sheet-table-header'>Name:</td>
+                    <td colspan=11><input title='repeating_moves_X_Move_Name' class='sheet-shortfield' name='attr_Move_Name' type='text'></td>
+                </tr>
+                <tr class="sheet-movelist">
+                    <td colspan=3 class='sheet-table-header'>Move Category:</td>
+                    <td colspan=3><select title='repeating_moves_X_Move_Output' class='sheet-shortfield' name='attr_Move_Output'>
+                        <option value='Physical'>Physical</option> 
+                        <option value='Special'>Special</option>
+                        <option value='Other'>Other</option>
+                    </select></td>
+                    <td colspan=3 class='sheet-table-header'>Defense Targeted:</td>
+                    <td colspan=3><select title='repeating_moves_X_Move_Input' class='sheet-shortfield' name='attr_Move_Input'>
+                        <option value='Physical'>Physical</option> 
+                        <option value='Special'>Special</option>
+                    </select></td>
+                </tr>
+                <tr class="sheet-movelist">
+                    <td colspan=3 class='sheet-table-header'>Type:</td>
+                    <td colspan=3><input title='repeating_moves_X_Move_Type' class='sheet-shortfield' name='attr_Move_Type' type='text'></td>
+                    <td colspan=3 class='sheet-table-header'>Target(s):</td>
+                    <td colspan=3><input title='repeating_moves_X_Move_Target' class='sheet-shortfield' name='attr_Move_Target' type='text'></td>
+                </tr>
+                <tr class="sheet-movelist">
+                    <td colspan=1 class='sheet-table-header'>Damage:</td>
+                    <td colspan=9><select title='repeating_moves_X_Move_Damage' class='sheet-shortfield3' name='attr_Move_Damage'>
+                        <option value='Strength'>Strength</option>
+                        <option value='Special'>Special</option>
+                    </select>+<input title='repeating_moves_X_Move_Power' class='sheet-shortfield' name='attr_Move_Power' type='number' value='0'>
+                    =<input title='repeating_moves_X_Move_Damage_T' class='sheet-shortfield' name='attr_Move_Damage_T' type='number'></td>
+                    <td class='sheet-table-header'>
+                        High-Crit:
+                    </td>
+                    <td>
+                        <input type="checkbox" name="attr_Move_Crit" value="1">
+                    </td>
+                </tr>
+                <tr class="sheet-movelist">
+                    <td colspan=1 class='sheet-table-header'>Effects:</td>
+                    <td colspan=11><input title='repeating_moves_X_Move_Effects' class='sheet-shortfield' name='attr_Move_Effects' type='text'></td>
+                </tr>
+                <tr class="sheet-movelist">
+                    <td colspan=1 class='sheet-table-header'>Chance Dice:</td>
+                    <td colspan=1><input title='repeating_moves_X_Move_Chancer' class='sheet-shortfield' name='attr_Move_Chance' type='number'></td>
+                    <td colspan=3 class='sheet-table-header'>Accuracy:</td>
+                    <td colspan=7><select title='repeating_moves_X_Move_Accuracy1' class='sheet-shortfield9' name='attr_Move_Accuracy1'>
+                        <option value='Strength' selected>Strength</option> 
+                        <option value='Vitality'>Vitality</option>
+                        <option value='Dexterity'>Dexterity</option>
+                        <option value='Insight'>Insight</option>
+                        <option value='Special'>Special</option>
+                        <option value='Will'>Will</option>
+                    </select>
+                    <input type="radio" name="attr_dummy_accuracy_w" class="sheet-dummy" value="0" checked/>
+                    <input type="radio" name="attr_dummy_accuracy_w" class="sheet-dummy sheet-dummy_accuracy_w" value="1"/>
+                    <span class='sheet-will'>
+                        +
+                    </span>
+                    <select title='repeating_moves_X_Move_Accuracy2' class='sheet-shortfield9 sheet-will' name='attr_Move_Accuracy2'>
+                        <option value='Fight' selected>Fight</option> 
+                        <option value='Survival'>Survival</option>
+                        <option value='Contest'>Contest</option>
+                    </select>
+                    <span class='sheet-will'>
+                        +
+                    </span>
+                    <input type="radio" name="attr_dummy_accuracy_s" class="sheet-dummy sheet-dummy_accuracy_f" value="0" checked/>
+                    <input type="radio" name="attr_dummy_accuracy_s" class="sheet-dummy sheet-dummy_accuracy_s" value="1"/>
+                    <input type="radio" name="attr_dummy_accuracy_s" class="sheet-dummy sheet-dummy_accuracy_c" value="2"/>
+                    <select title='repeating_moves_X_Move_Accuracy3f' class='sheet-shortfield9 sheet-fight sheet-will' name='attr_Move_Accuracy3f'>
+                        <option value='Brawl' selected>Brawl</option> 
+                        <option value='Channel'>Channel</option>
+                        <option value='Evasion'>Evasion</option>
+                        <option value='Clash'>Clash</option>
+                    </select>
+                    <select title='repeating_moves_X_Move_Accuracy3s' class='sheet-shortfield9 sheet-survival sheet-will' name='attr_Move_Accuracy3s'>
+                        <option value='Alert' selected>Alert</option> 
+                        <option value='Athletic'>Athletic</option>
+                        <option value='Nature'>Nature</option>
+                        <option value='Stealth'>Stealth</option>
+                    </select>
+                    <select title='repeating_moves_X_Move_Accuracy3c' class='sheet-shortfield9 sheet-contest sheet-will' name='attr_Move_Accuracy3c'>
+                        <option value='Allure' selected>Allure</option> 
+                        <option value='Etiquette'>Etiquette</option>
+                        <option value='Intimidate'>Intimidate</option>
+                        <option value='Perform'>Perform</option>
+                    </select>
+                    <input class='sheet-dummy' name='attr_Move_Accuracy3' type='text'>
+                    +<input title='repeating_moves_X_Move_Accuracy_Mod' class='sheet-shortfield' name='attr_Move_Accuracy_Mod' type='number' value=0></td>
+                </tr>
+                <tr class="sheet-movelist">
+                    <td colspan=1 class='sheet-table-header'>Added Effects:</td>
+                    <td style='vertical-align:middle' colspan=11><textarea title='Ability_Effect' class='sheet-textarea-d' name='attr_Ability_Effect'></textarea></td>
+                </tr>
+                <tr class="sheet-movelist">
+                    <td colspan=1 class='sheet-table-header'>Description:</td>
+                    <td style='vertical-align:middle' colspan=11><textarea title='Ability_Desc' class='sheet-textarea-d' name='attr_Ability_Desc'></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+</div>
+</div>
+
+<script type="text/worker">
+
+/* ---- BEGIN: TheAaronSheet.js ---- */
+// Github:   https://github.com/shdwjk/TheAaronSheet/blob/master/TheAaronSheet.js
+// By:       The Aaron, Arcane Scriptomancer
+// Contact:  https://app.roll20.net/users/104025/the-aaron
+
+var TAS = TAS || (function(){
+    'use strict';
+
+    var version = '0.2.5',
+        lastUpdate = 1504710542,
+
+        loggingSettings = {
+            debug: {
+                key:     'debug',
+                title:   'DEBUG',
+                color: {
+                    bgLabel: '#7732A2',
+                    label:   '#F2EF40',
+                    bgText:  '#FFFEB7',
+                    text:    '#7732A2'
+                }
+            },
+            error: {
+                key:     'error',
+                title:   'Error',
+                color: {
+                    bgLabel: '#C11713',
+                    label:   'white',
+                    bgText:  '#C11713',
+                    text:    'white'
+                }
+            },
+            warn: {
+                key:     'warn',
+                title:   'Warning',
+                color: {
+                    bgLabel: '#F29140',
+                    label:   'white',
+                    bgText:  '#FFD8B7',
+                    text:    'black'
+                }
+            },
+            info: {
+                key:     'info',
+                title:   'Info',
+                color: {
+                    bgLabel: '#413FA9',
+                    label:   'white',
+                    bgText:  '#B3B2EB',
+                    text:    'black'
+                }
+            },
+            notice: {
+                key:     'notice',
+                title:   'Notice',
+                color: {
+                    bgLabel: '#33C133',
+                    label:   'white',
+                    bgText:  '#ADF1AD',
+                    text:    'black'
+                }
+            },
+            log: {
+                key:     'log',
+                title:   'Log',
+                color: {
+                    bgLabel: '#f2f240',
+                    label:   'black',
+                    bgText:  '#ffff90',
+                    text:    'black'
+                }
+            },
+            callstack: {
+                key:     'TAS',
+                title:   'function',
+                color: {
+                    bgLabel: '#413FA9',
+                    label:   'white',
+                    bgText:  '#B3B2EB',
+                    text:    'black'
+                }
+            },
+            callstack_async: {
+                key:     'TAS',
+                title:   'ASYNC CALL',
+                color: {
+                    bgLabel: '#413FA9',
+                    label:   'white',
+                    bgText:  '#413FA9',
+                    text:    'white'
+                }
+            },
+            TAS: {
+                key:     'TAS',
+                title:   'TAS',
+                color: {
+                    bgLabel: 'grey',
+                    label:   'black;background:linear-gradient(#304352,#d7d2cc,#d7d2cc,#d7d2cc,#304352)',
+                    bgText:  'grey',
+                    text:    'black;background:linear-gradient(#304352,#d7d2cc,#d7d2cc,#d7d2cc,#304352)'
+                }
+            }
+        },
+
+
+        config = {
+            debugMode: false,
+            logging: {
+                log: true,
+                notice: true,
+                info: true,
+                warn: true,
+                error: true,
+                debug: false
+            }
+        },
+
+        callstackRegistry = [],
+		queuedUpdates = {}, //< Used for delaying saves till the last moment.
+
+    complexType = function(o){
+        switch(typeof o){
+            case 'string':
+                return 'string';
+            case 'boolean':
+                return 'boolean';
+            case 'number':
+                return (_.isNaN(o) ? 'NaN' : (o.toString().match(/\./) ? 'decimal' : 'integer'));
+            case 'function':
+                return 'function: '+(o.name ? o.name+'()' : '(anonymous)');
+            case 'object':
+                return (_.isArray(o) ? 'array' : (_.isArguments(o) ? 'arguments' : ( _.isNull(o) ? 'null' : 'object')));
+            default:
+                return typeof o;
+        }
+    },
+
+	dataLogger = function(primaryLogger,secondaryLogger,data){
+        _.each(data,function(m){
+            var type = complexType(m);
+            switch(type){
+                case 'string':
+                    primaryLogger(m);
+                    break;
+                case 'undefined':
+                case 'null':
+                case 'NaN':
+                    primaryLogger('['+type+']');
+                    break;
+                case 'number':
+                case 'not a number':
+                case 'integer':
+                case 'decimal':
+                case 'boolean':
+                    primaryLogger('['+type+']: '+m);
+                    break;
+                default:
+                    primaryLogger('['+type+']:=========================================');
+                    secondaryLogger(m);
+                    primaryLogger('=========================================================');
+                    break;
+            }
+        });
+	},
+
+
+    colorLog = function(options){
+        var coloredLoggerFunction,
+            key = options.key,
+            label = options.title || 'TAS',
+            lBGColor = (options.color && options.color.bgLabel) || 'blue',
+            lTxtColor = (options.color && options.color.label) || 'white',
+            mBGColor = (options.color && options.color.bgText) || 'blue',
+            mTxtColor = (options.color && options.color.text) || 'white';
+
+        coloredLoggerFunction = function(message){
+            /* eslint-disable no-console */
+            console.log(
+                '%c '+label+': %c '+message + ' ',
+                'background-color: '+lBGColor+';color: '+lTxtColor+'; font-weight:bold;',
+                'background-color: '+mBGColor+';color: '+mTxtColor+';'
+            ); 
+            /* eslint-enable no-console */
+        };
+        return function(){
+            if('TAS'===key || config.logging[key]){
+                /* eslint-disable no-console */
+               dataLogger(coloredLoggerFunction,function(m){console.log(m);},_.toArray(arguments)); 
+                /* eslint-enable no-console */
+            }
+        };
+    },
+
+    logDebug  = colorLog(loggingSettings.debug),
+    logError  = colorLog(loggingSettings.error),
+    logWarn   = colorLog(loggingSettings.warn),
+    logInfo   = colorLog(loggingSettings.info),
+    logNotice = colorLog(loggingSettings.notice),
+    logLog    = colorLog(loggingSettings.log),
+    log       = colorLog(loggingSettings.TAS),
+    logCS     = colorLog(loggingSettings.callstack),
+    logCSA    = colorLog(loggingSettings.callstack_async),
+
+    registerCallstack = function(callstack,label){
+        var idx=_.findIndex(callstackRegistry,function(o){
+            return (_.difference(o.stack,callstack).length === _.difference(callstack,o.stack).length) &&
+                _.difference(o.stack,callstack).length === 0 &&
+                o.label === label;
+        });
+        if(-1 === idx){
+            idx=callstackRegistry.length;
+            callstackRegistry.push({
+                stack: callstack,
+                label: label
+            });
+        }
+        return idx;
+    },
+
+    setConfigOption = function(options){
+        var newconf =_.defaults(options,config);
+        newconf.logging=_.defaults(
+            (options && options.logging)||{},
+            config.logging
+        );
+        config=newconf;
+    },
+    
+    isDebugMode = function(){
+        return config.debugMode;
+    },
+
+    debugMode = function(){
+        config.logging.debug=true;
+        config.debugMode = true;
+    },
+
+    getCallstack = function(){
+        var e = new Error('dummy'),
+            stack = _.map(_.rest(e.stack.replace(/^[^(]+?[\n$]/gm, '')
+            .replace(/^\s+at\s+/gm, '')
+            .replace(/^Object.<anonymous>\s*\(/gm, '{anonymous}()@')
+            .split('\n')),function(l){
+                return l.replace(/\s+.*$/,'');
+            });
+        return stack;
+    },
+    logCallstackSub = function(cs){
+        var matches, csa;
+        _.find(cs,function(line){
+            matches = line.match(/TAS_CALLSTACK_(\d+)/);
+            if(matches){
+               csa=callstackRegistry[matches[1]];
+               logCSA( '===================='+(csa.label ? '> '+csa.label+' <' : '')+'====================');
+               logCallstackSub(csa.stack);
+               return true;
+            } 
+            logCS(line);
+            return false;
+        });
+    },
+    logCallstack = function(){
+        var cs;
+        if(config.debugMode){
+            cs = getCallstack();
+            cs.shift();
+            log('==============================> CALLSTACK <==============================');
+            logCallstackSub(cs);
+            log('=========================================================================');
+        }
+    },
+
+
+    wrapCallback = function (label, callback, context){
+        var callstack;
+        if('function' === typeof label){
+            context=callback;
+            callback=label;
+            label=undefined;
+        }
+        if(!config.debugMode){
+            return (function(cb,ctx){
+                return function(){
+                    cb.apply(ctx||{},arguments);
+                };
+            }(callback,context));
+        }
+        
+        callstack = getCallstack();
+        callstack.shift();
+        
+        return (function(cb,ctx,cs,lbl){
+            var ctxref=registerCallstack(cs,lbl);
+
+            /*jshint -W054 */
+            return new Function('cb','ctx','TASlog',
+                "return function TAS_CALLSTACK_"+ctxref+"(){"+
+                    "var start,end;"+
+                    "TASlog('Entering: '+(cb.name||'(anonymous function)'));"+
+                    "start=_.now();"+
+                    "cb.apply(ctx||{},arguments);"+
+                    "end=_.now();"+
+                    "TASlog('Exiting: '+(cb.name||'(anonymous function)')+' :: '+(end-start)+'ms elapsed');"+
+                "};")(cb,ctx,log);
+            /*jshint +W054 */
+        }(callback,context,callstack,label));
+    },
+
+
+    prepareUpdate = function( attribute, value ){
+        queuedUpdates[attribute]=value;
+    },
+
+    applyQueuedUpdates = function() {
+      setAttrs(queuedUpdates);
+      queuedUpdates = {};
+    },
+
+	namesFromArgs = function(args,base){
+        return _.chain(args)
+            .reduce(function(memo,attr){
+                if('string' === typeof attr) {
+                    memo.push(attr);
+                } else if(_.isArray(args) || _.isArguments(args)){
+                    memo = namesFromArgs(attr,memo);
+                }
+                return memo;
+            },(_.isArray(base) && base) || [])
+            .uniq()
+            .value();
+	},
+
+	addId = function(obj,value){
+		Object.defineProperty(obj,'id',{
+			value: value,
+			writable: false,
+			enumerable: false
+		});
+	},
+
+	addProp = function(obj,prop,value,fullname){
+		(function(){
+            var pname=(_.contains(['S','F','I','D'],prop) ? '_'+prop : prop),
+                full_pname = fullname || prop,
+                pvalue=value;
+
+            _.each(['S','I','F'],function(p){
+                if( !_.has(obj,p)){
+                    Object.defineProperty(obj, p, {
+                        value: {},
+                        enumerable: false,
+                        readonly: true
+                    });
+                }
+            });
+            if( !_.has(obj,'D')){
+                Object.defineProperty(obj, 'D', {
+                    value: _.reduce(_.range(10),function(m,d){
+                            Object.defineProperty(m, d, {
+                                value: {},
+                                enumerable: true,
+                                readonly: true
+                            });
+                            return m;
+                        },{}),
+                    enumerable: false,
+                    readonly: true
+                });
+            }
+
+
+            // Raw value
+			Object.defineProperty(obj, pname, {
+                enumerable: true,
+				set: function(v){
+                    if(v!==pvalue) {
+                        pvalue=v;
+                        prepareUpdate(full_pname,v);
+                    }
+				},
+				get: function(){
+					return pvalue;
+				}
+			});
+            
+            // string value
+			Object.defineProperty(obj.S, pname, {
+                enumerable: true,
+				set: function(v){
+                    var val=v.toString();
+                    if(val !== pvalue) {
+                        pvalue=val;
+                        prepareUpdate(full_pname,val);
+                    }
+				},
+				get: function(){
+					return pvalue.toString();
+				}
+			});
+
+            // int value
+			Object.defineProperty(obj.I, pname, {
+                enumerable: true,
+				set: function(v){
+                    var val=parseInt(v,10) || 0;
+                    if(val !== pvalue){
+                        pvalue=val;
+                        prepareUpdate(full_pname,val);
+                    }
+				},
+				get: function(){
+					return parseInt(pvalue,10) || 0;
+				}
+			});
+
+            // float value
+			Object.defineProperty(obj.F, pname, {
+                enumerable: true,
+				set: function(v){
+                    var val=parseFloat(v) || 0;
+                    if(val !== pvalue) {
+                        pvalue=val;
+                        prepareUpdate(full_pname,val);
+                    }
+				},
+				get: function(){
+					return parseFloat(pvalue) || 0;
+				}
+			});
+            _.each(_.range(10),function(d){
+                Object.defineProperty(obj.D[d], pname, {
+                    enumerable: true,
+                    set: function(v){
+                        var val=(parseFloat(v) || 0).toFixed(d);
+                        if(val !== pvalue){
+                            pvalue=val;
+                            prepareUpdate(full_pname,val);
+                        }
+                    },
+                    get: function(){
+                        return (parseFloat(pvalue) || 0).toFixed(d);
+                    }
+                });
+            });
+
+		}());
+	},
+	
+	repeating = function( section ) {
+		return (function(s){
+			var sectionName = s,
+				attrNames = [],
+				fieldNames = [],
+				operations = [],
+                after = [],
+			
+			repAttrs = function TAS_Repeating_Attrs(){
+				attrNames = namesFromArgs(arguments,attrNames);
+				return this;
+			},
+			repFields = function TAS_Repeating_Fields(){
+				fieldNames = namesFromArgs(arguments,fieldNames);
+				return this;
+			},
+			repReduce = function TAS_Repeating_Reduce(func, initial, final, context) { 
+				operations.push({
+                    type: 'reduce',
+                    func: (func && _.isFunction(func) && func) || _.noop,
+                    memo: (_.isUndefined(initial) && 0) || initial,
+                    final: (final && _.isFunction(final) && final) || _.noop,
+                    context: context || {}
+                });
+				return this;
+			},
+			repMap = function TAS_Repeating_Map(func, final, context) {
+				operations.push({
+                    type: 'map',
+                    func: (func && _.isFunction(func) && func) || _.noop,
+                    final: (final && _.isFunction(final) && final) || _.noop,
+                    context: context || {}
+                });
+				return this;
+			},
+            repEach = function TAS_Repeating_Each(func, final, context) {
+				operations.push({
+                    type: 'each',
+                    func: (func && _.isFunction(func) && func) || _.noop,
+                    final: (final && _.isFunction(final) && final) || _.noop,
+                    context: context || {}
+                });
+				return this;
+            },
+            repTap = function TAS_Repeating_Tap(final, context) {
+				operations.push({
+                    type: 'tap',
+                    final: (final && _.isFunction(final) && final) || _.noop,
+                    context: context || {}
+                });
+				return this;
+            },
+            repAfter = function TAS_Repeating_After(callback,context) {
+				after.push({
+                    callback: (callback && _.isFunction(callback) && callback) || _.noop,
+                    context: context || {}
+                });
+				return this;
+            },
+			repExecute = function TAS_Repeating_Execute(callback,context){
+				var rowSet = {},
+					attrSet = {},
+					fieldIds = [],
+					fullFieldNames = [];
+
+                repAfter(callback,context);
+
+				// call each operation per row.
+				// call each operation's final
+				getSectionIDs("repeating_"+sectionName,function(ids){
+					fieldIds = ids;
+					fullFieldNames = _.reduce(fieldIds,function(memo,id){
+						return memo.concat(_.map(fieldNames,function(name){
+							return 'repeating_'+sectionName+'_'+id+'_'+name;  
+						}));
+					},[]);
+					getAttrs( _.uniq(attrNames.concat(fullFieldNames)), function(values){
+						_.each(attrNames,function(aname){
+							if(values.hasOwnProperty(aname)){
+								addProp(attrSet,aname,values[aname]);
+							}
+						});
+
+						rowSet = _.reduce(fieldIds,function(memo,id){
+							var r={};
+							addId(r,id);
+							_.each(fieldNames,function(name){
+								var fn = 'repeating_'+sectionName+'_'+id+'_'+name;  
+								addProp(r,name,values[fn],fn);
+							});
+
+							memo[id]=r;
+
+							return memo;
+						},{});
+
+                        _.each(operations,function(op){
+                            var res;
+                            switch(op.type){
+                                case 'tap':
+                                    _.bind(op.final,op.context,rowSet,attrSet)();
+                                    break;
+
+                                case 'each':
+                                    _.each(rowSet,function(r){
+                                        _.bind(op.func,op.context,r,attrSet,r.id,rowSet)();
+                                    });
+                                    _.bind(op.final,op.context,rowSet,attrSet)();
+                                    break;
+
+                                case 'map':
+                                    res = _.map(rowSet,function(r){
+                                        return _.bind(op.func,op.context,r,attrSet,r.id,rowSet)();
+                                    });
+                                    _.bind(op.final,op.context,res,rowSet,attrSet)();
+                                    break;
+
+                                case 'reduce':
+                                    res = op.memo;
+                                    _.each(rowSet,function(r){
+                                        res = _.bind(op.func,op.context,res,r,attrSet,r.id,rowSet)();
+                                    });
+                                    _.bind(op.final,op.context,res,rowSet,attrSet)();
+                                    break;
+                            }
+                        });
+
+                        // finalize attrs
+                        applyQueuedUpdates();
+                        _.each(after,function(op){
+                            _.bind(op.callback,op.context)();
+                        });
+					});
+				});
+			};
+				
+			return {
+				attrs: repAttrs,
+				attr: repAttrs,
+
+				column: repFields,
+				columns: repFields,
+				field: repFields,
+				fields: repFields,
+
+				reduce: repReduce,
+				inject: repReduce,
+				foldl: repReduce,
+
+				map: repMap,
+				collect: repMap,
+
+				each: repEach,
+                forEach: repEach,
+
+                tap: repTap,
+                'do': repTap,
+
+				after: repAfter,
+				last: repAfter,
+				done: repAfter,
+
+				execute: repExecute,
+				go: repExecute,
+				run: repExecute
+			};
+		}(section));
+	},
+
+
+    repeatingSimpleSum = function(section, field, destination){
+        repeating(section)
+            .attr(destination)
+            .field(field)
+            .reduce(function(m,r){
+                return m + (r.F[field]);
+            },0,function(t,r,a){
+                a.S[destination]=t;
+            })
+            .execute();
+    };
+
+    /* eslint-disable no-console */
+	console.log('%c•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸  The Aaron Sheet  v'+version+'  ¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•','background: linear-gradient(to right,green,white,white,green); color:black;text-shadow: 0 0 8px white;');
+	console.log('%c•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸  Last update: '+(new Date(lastUpdate*1000))+'  ¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•','background: linear-gradient(to right,green,white,white,green); color:black;text-shadow: 0 0 8px white;');
+    /* eslint-enable no-console */
+
+
+    return {
+        /* Repeating Sections */
+        repeatingSimpleSum: repeatingSimpleSum,
+		repeating: repeating,
+
+        /* Configuration */
+        config: setConfigOption,
+
+        /* Debugging */
+        callback: wrapCallback,
+        callstack: logCallstack,
+        debugMode: debugMode,
+        isDebugMode: isDebugMode,
+        _fn: wrapCallback,
+
+        /* Logging */
+        debug: logDebug,
+        error: logError,
+        warn: logWarn,
+        info: logInfo,
+        notice: logNotice,
+        log: logLog
+    };
+}());
+
+/* ---- END: TheAaronSheet.js ---- */
+    
+on("change:repeating_moves:move_accuracy1", function(eventInfo) {
+    setAttrs({ 
+        repeating_moves_dummy_accuracy_w: ((eventInfo.newValue == 'Will') ? 1 : 0) 
+    });
+});
+
+on("change:repeating_moves:move_accuracy2", function(eventInfo) {
+    var x; var k;
+    if (eventInfo.newValue == 'Fight'){
+        x = 0;
+        k = 'repeating_moves_Move_Accuracy3f';
+    } else if (eventInfo.newValue == 'Survival'){
+        x = 1;
+        k = 'repeating_moves_Move_Accuracy3s';
+    } else {
+        x = 2;
+        k = 'repeating_moves_Move_Accuracy3c';
+    }
+    getAttrs([k], function(v) {
+        setAttrs({ 
+            repeating_moves_dummy_accuracy_s: x,
+            repeating_moves_Move_Accuracy3: v[k]
+        });
+   });
+});
+
+on("change:repeating_moves:move_accuracy3f change:repeating_moves:move_accuracy3s change:repeating_moves:move_accuracy3c", function(eventInfo) {
+    setAttrs({ 
+        repeating_moves_Move_Accuracy3: eventInfo.newValue,
+    });
+});
+
+on("change:repeating_moves:move_damage change:repeating_moves:move_power", function(eventInfo) {
+    getAttrs(['repeating_moves_Move_Damage','repeating_moves_Move_Power', 'pokemon_Strength', 'pokemon_Special'], function(v) {
+        setAttrs({ 
+            repeating_moves_Move_Damage_T: parseInt(v['pokemon_'+v['repeating_moves_Move_Damage']], 10)+parseInt(v['repeating_moves_Move_Power'], 10)
+        });
+   });
+});
+
+on('change:pokemon_strength change:pokemon_special', function(eventInfo) {
+    TAS.repeating('moves')
+    .attrs('pokemon_Strength','pokemon_Special')
+    .fields('Move_Damage','Move_Power','Move_Damage_T')
+    .each(function(row,attrSet,id,rowSet){
+        console.log('pokemon_'+row.Move_Damage);
+        row.I.Move_Damage_T=attrSet.I['pokemon_'+row.Move_Damage]+row.I.Move_Power;
+    })
+    .execute();
+});
+
+on("change:repeating_moves:move_output", function(eventInfo) {
+    if (eventInfo.newValue != 'Other'){
+        setAttrs({ 
+            repeating_moves_Move_Input: eventInfo.newValue
+        });
+    }
+});
+
+on("change:pokemon_dexterity change:pokemon_survival change:pokemon_alert change:pokemon_fight change:pokemon_evasion change:evasion_stage", function(eventInfo) {
+    getAttrs(['pokemon_Dexterity','pokemon_Survival','pokemon_Alert','pokemon_Fight','pokemon_Evasion','Evasion_Stage'], function(v) {
+        setAttrs({ 
+            InitD: v.pokemon_Dexterity,
+            EvaD: v.pokemon_Dexterity,
+            InitS: v.pokemon_Survival,
+            EvaF: v.pokemon_Fight,
+            InitA: v.pokemon_Alert,
+            EvaE: v.pokemon_Evasion,
+            pokemon_Initiative: parseInt(v.pokemon_Dexterity,10)+parseInt(v.pokemon_Survival,10)+parseInt(v.pokemon_Alert,10),
+            pokemon_Evasion_Battle: parseInt(v.pokemon_Dexterity,10)+parseInt(v.pokemon_Fight,10)+parseInt(v.pokemon_Evasion,10)+parseInt(v.Evasion_Stage,10)
+        });
+    });
+});
+
+on("change:pokemon_vitality change:def_stage change:spdef_stage", function(eventInfo) {
+    getAttrs(['pokemon_Vitality','Def_Stage','SpDef_Stage'], function(v) {
+        setAttrs({ 
+            DefV: v.pokemon_Vitality,
+            SpDefV: v.pokemon_Vitality,
+            Def: Math.min(parseInt(v.pokemon_Vitality,10)+parseInt(v.Def_Stage,10),10),
+            SpDef: Math.min(parseInt(v.pokemon_Vitality,10)+parseInt(v.SpDef_Stage,10),10)
+        });
+    });
+});
+</script>
