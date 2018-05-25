@@ -173,7 +173,9 @@ input.sheet-arrow:checked ~ .sheet-stagelist {
     display: block;
 }
 
-.sheet-rolltemplate-PTU table {
+.sheet-rolltemplate-Pokerole-move table,
+.sheet-rolltemplate-Pokerole-display table,
+.sheet-rolltemplate-Pokerole-skill table{
     width: 100%;
     border: 1px solid;
     color: black;
@@ -181,7 +183,17 @@ input.sheet-arrow:checked ~ .sheet-stagelist {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.sheet-rolltemplate-PTU th {
+.sheet-rolltemplate-Test table{
+    width: 100%;
+    border: 1px solid;
+    color: black;
+    font-size: 1em;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.sheet-rolltemplate-Pokerole-move th,
+.sheet-rolltemplate-Pokerole-display th,
+.sheet-rolltemplate-Pokerole-skill th{
     background: url(http://i.imgur.com/5aRtcpq.png) top no-repeat, url(http://i.imgur.com/yyzOMmI.png top no-repeat);
     color: #ffffff;
     padding: 2px 2px 2px 40px;
@@ -190,50 +202,70 @@ input.sheet-arrow:checked ~ .sheet-stagelist {
     font-size: 1.2em;
 }
 
-.sheet-rolltemplate-PTU .userscript-tcat {
+.sheet-rolltemplate-Pokerole-move .userscript-tcat,
+.sheet-rolltemplate-Pokerole-display .userscript-tcat,
+.sheet-rolltemplate-Pokerole-skill .userscript-tcat{
     font-weight: bold;
 }
 
-.sheet-rolltemplate-PTU td {
+.sheet-rolltemplate-Pokerole-move td,
+.sheet-rolltemplate-Pokerole-display td,
+.sheet-rolltemplate-Pokerole-skill td{
 	padding: 5px;
 	border-bottom: 1px solid black;
 }
 
-.sheet-rolltemplate-PTU tr:nth-child(odd) {
+.sheet-rolltemplate-Pokerole-move tr:nth-child(odd),
+.sheet-rolltemplate-Pokerole-display tr:nth-child(odd),
+.sheet-rolltemplate-Pokerole-skill tr:nth-child(odd){
 	background-color: rgba(217, 217, 214,1);
 }
 
-.sheet-rolltemplate-PTU tr:nth-child(even) {
+.sheet-rolltemplate-Pokerole-move tr:nth-child(even),
+.sheet-rolltemplate-Pokerole-display tr:nth-child(even),
+.sheet-rolltemplate-Pokerole-skill tr:nth-child(even){
 	background-color: rgba(233, 233, 233,1);
 }
 
-.sheet-rolltemplate-PTU .inlinerollresult  {
+.sheet-rolltemplate-Pokerole-move .inlinerollresult,
+.sheet-rolltemplate-Pokerole-display .inlinerollresult,
+.sheet-rolltemplate-Pokerole-skill .inlinerollresult{
 	display: inline-block;
 	min-width: 1.5em;
 	text-align: center;
 	border: 2px solid rgba(167, 168, 170,1); /*Cool Gray 6 C*/
 }
 
-.sheet-rolltemplate-PTU .inlinerollresult.fullcrit {
+.sheet-rolltemplate-Pokerole-move .inlinerollresult.fullcrit,
+.sheet-rolltemplate-Pokerole-display .inlinerollresult.fullcrit,
+.sheet-rolltemplate-Pokerole-skill .inlinerollresult.fullcrit{
 	border: 2px solid #3FB315;
 }
 
-.sheet-rolltemplate-PTU .inlinerollresult.fullfail {
+.sheet-rolltemplate-Pokerole-move .inlinerollresult.fullfail,
+.sheet-rolltemplate-Pokerole-display .inlinerollresult.fullfail,
+.sheet-rolltemplate-Pokerole-skill .inlinerollresult.fullfail{
 	border: 2px solid #B31515;
 }
 
-.sheet-rolltemplate-PTU .inlinerollresult.importantroll {
+.sheet-rolltemplate-Pokerole-move .inlinerollresult.importantroll,
+.sheet-rolltemplate-Pokerole-display .inlinerollresult.importantroll,
+.sheet-rolltemplate-Pokerole-skill .inlinerollresult.importantroll{
 	border: 2px solid #4A57ED;
 }
 
-.sheet-rolltemplate-PTU .sheet-hit {
+.sheet-rolltemplate-Pokerole-move .sheet-hit,
+.sheet-rolltemplate-Pokerole-display .sheet-hit,
+.sheet-rolltemplate-Pokerole-skill .sheet-hit{
     background-color: #3ADF00;
     text-align: center;
     font-size: 150%;
     font-family: ,Serif;
 }
 
-.sheet-rolltemplate-PTU .sheet-miss {
+.sheet-rolltemplate-Pokerole-move .sheet-miss,
+.sheet-rolltemplate-Pokerole-display .sheet-miss,
+.sheet-rolltemplate-Pokerole-skill .sheet-miss{
     background-color: #DF0101;
     text-align: center;
     font-size: 150%;
